@@ -14,7 +14,7 @@ namespace CriadorTabelas.Entities
 
         public void OpenConnection()
         {
-            /* Dados de conexão - HOMOLOGAÇÃO */
+            /* ATENÇÃO - Dados de conexão - HOMOLOGAÇÃO */
             oCompany.Server = "DESKTOP-HONU6IK";
             oCompany.CompanyDB = "SBODemoBR";
             oCompany.UserName = "manager";
