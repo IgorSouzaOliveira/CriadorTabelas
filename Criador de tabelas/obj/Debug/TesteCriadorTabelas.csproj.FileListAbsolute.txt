@@ -1,0 +1,13 @@
+C:\Users\igor.oliveira\source\repos\TesteCriadorTabelas\TesteCriadorTabelas\bin\Debug\TesteCriadorTabelas.exe.config
+C:\Users\igor.oliveira\source\repos\TesteCriadorTabelas\TesteCriadorTabelas\bin\Debug\TesteCriadorTabelas.exe
+C:\Users\igor.oliveira\source\repos\TesteCriadorTabelas\TesteCriadorTabelas\bin\Debug\TesteCriadorTabelas.pdb
+C:\Users\igor.oliveira\source\repos\TesteCriadorTabelas\TesteCriadorTabelas\obj\Debug\TesteCriadorTabelas.csproj.AssemblyReference.cache
+C:\Users\igor.oliveira\source\repos\TesteCriadorTabelas\TesteCriadorTabelas\obj\Debug\Interop.SAPbobsCOM.dll
+C:\Users\igor.oliveira\source\repos\TesteCriadorTabelas\TesteCriadorTabelas\obj\Debug\Interop.SAPbouiCOM.dll
+C:\Users\igor.oliveira\source\repos\TesteCriadorTabelas\TesteCriadorTabelas\obj\Debug\TesteCriadorTabelas.csproj.ResolveComReference.cache
+C:\Users\igor.oliveira\source\repos\TesteCriadorTabelas\TesteCriadorTabelas\obj\Debug\TesteCriadorTabelas.Form1.resources
+C:\Users\igor.oliveira\source\repos\TesteCriadorTabelas\TesteCriadorTabelas\obj\Debug\TesteCriadorTabelas.Properties.Resources.resources
+C:\Users\igor.oliveira\source\repos\TesteCriadorTabelas\TesteCriadorTabelas\obj\Debug\TesteCriadorTabelas.csproj.GenerateResource.cache
+C:\Users\igor.oliveira\source\repos\TesteCriadorTabelas\TesteCriadorTabelas\obj\Debug\TesteCriadorTabelas.csproj.CoreCompileInputs.cache
+C:\Users\igor.oliveira\source\repos\TesteCriadorTabelas\TesteCriadorTabelas\obj\Debug\TesteCriadorTabelas.exe
+C:\Users\igor.oliveira\source\repos\TesteCriadorTabelas\TesteCriadorTabelas\obj\Debug\TesteCriadorTabelas.pdb

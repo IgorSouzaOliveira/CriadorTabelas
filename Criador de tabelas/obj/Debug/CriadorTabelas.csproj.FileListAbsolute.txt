@@ -1,0 +1,180 @@
+C:\Users\SAPDEVB1\Documents\Criador de tabelas\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.AssemblyReference.cache
+C:\Users\SAPDEVB1\Documents\Criador de tabelas\Criador de tabelas\Criador de tabelas\obj\Debug\Interop.SAPbobsCOM.dll
+C:\Users\SAPDEVB1\Documents\Criador de tabelas\Criador de tabelas\Criador de tabelas\obj\Debug\Interop.SAPbouiCOM.dll
+C:\Users\SAPDEVB1\Documents\Criador de tabelas\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.ResolveComReference.cache
+C:\Users\SAPDEVB1\Documents\Criador de tabelas\Criador de tabelas\Criador de tabelas\obj\Debug\TesteCriadorTabelas.CriadorTabelas.resources
+C:\Users\SAPDEVB1\Documents\Criador de tabelas\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.GenerateResource.cache
+C:\Users\SAPDEVB1\Documents\Criador de tabelas\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.CoreCompileInputs.cache
+C:\Users\SAPDEVB1\Documents\Criador de tabelas\Criador de tabelas\Criador de tabelas\bin\Debug\CriadorTabelas.exe.config
+C:\Users\SAPDEVB1\Documents\Criador de tabelas\Criador de tabelas\Criador de tabelas\bin\Debug\CriadorTabelas.exe
+C:\Users\SAPDEVB1\Documents\Criador de tabelas\Criador de tabelas\Criador de tabelas\bin\Debug\CriadorTabelas.pdb
+C:\Users\SAPDEVB1\Documents\Criador de tabelas\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.Properties.Resources.resources
+C:\Users\SAPDEVB1\Documents\Criador de tabelas\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.exe
+C:\Users\SAPDEVB1\Documents\Criador de tabelas\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.pdb
+C:\Users\SAPDEVB1\Documents\Criador de tabelas\Criador de tabelas\Criador de tabelas\bin\Debug\CriadorTabelas.exe.manifest
+C:\Users\SAPDEVB1\Documents\Criador de tabelas\Criador de tabelas\Criador de tabelas\bin\Debug\CriadorTabelas.application
+C:\Users\SAPDEVB1\Documents\Criador de tabelas\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.exe.manifest
+C:\Users\SAPDEVB1\Documents\Criador de tabelas\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.application
+C:\Users\SAPDEVB1\Documents\Add-on SO Solutions\Criador de tabelas\Criador de tabelas\bin\Debug\CriadorTabelas.exe.config
+C:\Users\SAPDEVB1\Documents\Add-on SO Solutions\Criador de tabelas\Criador de tabelas\bin\Debug\CriadorTabelas.exe.manifest
+C:\Users\SAPDEVB1\Documents\Add-on SO Solutions\Criador de tabelas\Criador de tabelas\bin\Debug\CriadorTabelas.application
+C:\Users\SAPDEVB1\Documents\Add-on SO Solutions\Criador de tabelas\Criador de tabelas\bin\Debug\CriadorTabelas.exe
+C:\Users\SAPDEVB1\Documents\Add-on SO Solutions\Criador de tabelas\Criador de tabelas\bin\Debug\CriadorTabelas.pdb
+C:\Users\SAPDEVB1\Documents\Add-on SO Solutions\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.AssemblyReference.cache
+C:\Users\SAPDEVB1\Documents\Add-on SO Solutions\Criador de tabelas\Criador de tabelas\obj\Debug\Interop.SAPbobsCOM.dll
+C:\Users\SAPDEVB1\Documents\Add-on SO Solutions\Criador de tabelas\Criador de tabelas\obj\Debug\Interop.SAPbouiCOM.dll
+C:\Users\SAPDEVB1\Documents\Add-on SO Solutions\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.ResolveComReference.cache
+C:\Users\SAPDEVB1\Documents\Add-on SO Solutions\Criador de tabelas\Criador de tabelas\obj\Debug\TesteCriadorTabelas.CriadorTabelas.resources
+C:\Users\SAPDEVB1\Documents\Add-on SO Solutions\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.Properties.Resources.resources
+C:\Users\SAPDEVB1\Documents\Add-on SO Solutions\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.UserLogin.resources
+C:\Users\SAPDEVB1\Documents\Add-on SO Solutions\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.GenerateResource.cache
+C:\Users\SAPDEVB1\Documents\Add-on SO Solutions\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.CoreCompileInputs.cache
+C:\Users\SAPDEVB1\Documents\Add-on SO Solutions\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.exe.manifest
+C:\Users\SAPDEVB1\Documents\Add-on SO Solutions\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.application
+C:\Users\SAPDEVB1\Documents\Add-on SO Solutions\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.exe
+C:\Users\SAPDEVB1\Documents\Add-on SO Solutions\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.pdb
+C:\Users\igor.oliveira\Downloads\Criador de tabelas-20240215T111628Z-001\Criador de tabelas\Criador de tabelas\bin\Debug\CriadorTabelas.exe.config
+C:\Users\igor.oliveira\Downloads\Criador de tabelas-20240215T111628Z-001\Criador de tabelas\Criador de tabelas\bin\Debug\CriadorTabelas.exe.manifest
+C:\Users\igor.oliveira\Downloads\Criador de tabelas-20240215T111628Z-001\Criador de tabelas\Criador de tabelas\bin\Debug\CriadorTabelas.application
+C:\Users\igor.oliveira\Downloads\Criador de tabelas-20240215T111628Z-001\Criador de tabelas\Criador de tabelas\bin\Debug\CriadorTabelas.exe
+C:\Users\igor.oliveira\Downloads\Criador de tabelas-20240215T111628Z-001\Criador de tabelas\Criador de tabelas\bin\Debug\CriadorTabelas.pdb
+C:\Users\igor.oliveira\Downloads\Criador de tabelas-20240215T111628Z-001\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.AssemblyReference.cache
+C:\Users\igor.oliveira\Downloads\Criador de tabelas-20240215T111628Z-001\Criador de tabelas\Criador de tabelas\obj\Debug\Interop.SAPbobsCOM.dll
+C:\Users\igor.oliveira\Downloads\Criador de tabelas-20240215T111628Z-001\Criador de tabelas\Criador de tabelas\obj\Debug\Interop.SAPbouiCOM.dll
+C:\Users\igor.oliveira\Downloads\Criador de tabelas-20240215T111628Z-001\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.ResolveComReference.cache
+C:\Users\igor.oliveira\Downloads\Criador de tabelas-20240215T111628Z-001\Criador de tabelas\Criador de tabelas\obj\Debug\TesteCriadorTabelas.CriadorTabelas.resources
+C:\Users\igor.oliveira\Downloads\Criador de tabelas-20240215T111628Z-001\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.Properties.Resources.resources
+C:\Users\igor.oliveira\Downloads\Criador de tabelas-20240215T111628Z-001\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.UserLogin.resources
+C:\Users\igor.oliveira\Downloads\Criador de tabelas-20240215T111628Z-001\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.GenerateResource.cache
+C:\Users\igor.oliveira\Downloads\Criador de tabelas-20240215T111628Z-001\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.CoreCompileInputs.cache
+C:\Users\igor.oliveira\Downloads\Criador de tabelas-20240215T111628Z-001\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.exe.manifest
+C:\Users\igor.oliveira\Downloads\Criador de tabelas-20240215T111628Z-001\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.application
+C:\Users\igor.oliveira\Downloads\Criador de tabelas-20240215T111628Z-001\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.exe
+C:\Users\igor.oliveira\Downloads\Criador de tabelas-20240215T111628Z-001\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.pdb
+C:\Users\Souza\Desktop\Criador de tabelas\Criador de tabelas\bin\Debug\CriadorTabelas.exe.config
+C:\Users\Souza\Desktop\Criador de tabelas\Criador de tabelas\bin\Debug\CriadorTabelas.exe.manifest
+C:\Users\Souza\Desktop\Criador de tabelas\Criador de tabelas\bin\Debug\CriadorTabelas.application
+C:\Users\Souza\Desktop\Criador de tabelas\Criador de tabelas\bin\Debug\CriadorTabelas.exe
+C:\Users\Souza\Desktop\Criador de tabelas\Criador de tabelas\bin\Debug\CriadorTabelas.pdb
+C:\Users\Souza\Desktop\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.AssemblyReference.cache
+C:\Users\Souza\Desktop\Criador de tabelas\Criador de tabelas\obj\Debug\Interop.SAPbobsCOM.dll
+C:\Users\Souza\Desktop\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.ResolveComReference.cache
+C:\Users\Souza\Desktop\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.Properties.Resources.resources
+C:\Users\Souza\Desktop\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.UserLogin.resources
+C:\Users\Souza\Desktop\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.GenerateResource.cache
+C:\Users\Souza\Desktop\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.CoreCompileInputs.cache
+C:\Users\Souza\Desktop\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.exe.manifest
+C:\Users\Souza\Desktop\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.application
+C:\Users\Souza\Desktop\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.exe
+C:\Users\Souza\Desktop\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.pdb
+C:\Users\Souza\Desktop\Criador de tabelas\Criador de tabelas\obj\Debug\TesteCriadorTabelas.formCriadorTabelas.resources
+C:\Users\Souza\Desktop\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.ConexaoBanco.resources
+C:\Users\Souza\Desktop\Criador de tabelas\Criador de tabelas\obj\Debug\CriadorTabelas.Forms.CriadorTabelaAddOn.resources
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas - 1.0.2\Criador de tabelas\bin\Debug\CriadorTabelas.exe.config
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas - 1.0.2\Criador de tabelas\bin\Debug\CriadorTabelas.exe.manifest
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas - 1.0.2\Criador de tabelas\bin\Debug\CriadorTabelas.application
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas - 1.0.2\Criador de tabelas\bin\Debug\CriadorTabelas.exe
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas - 1.0.2\Criador de tabelas\bin\Debug\CriadorTabelas.pdb
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\Interop.SAPbobsCOM.dll
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\Interop.SAPbouiCOM.dll
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.ResolveComReference.cache
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\TesteCriadorTabelas.formCriadorTabelas.resources
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.Properties.Resources.resources
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.GenerateResource.cache
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.CoreCompileInputs.cache
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.exe.manifest
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.application
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.exe
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.pdb
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.UserLogin.resources
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.AssemblyReference.cache
+C:\Users\SAPDEVB1\Desktop\Criador de tabelas - 1.0.2\Criador de tabelas\bin\Debug\CriadorTabelas.exe.config
+C:\Users\SAPDEVB1\Desktop\Criador de tabelas - 1.0.2\Criador de tabelas\bin\Debug\CriadorTabelas.exe.manifest
+C:\Users\SAPDEVB1\Desktop\Criador de tabelas - 1.0.2\Criador de tabelas\bin\Debug\CriadorTabelas.application
+C:\Users\SAPDEVB1\Desktop\Criador de tabelas - 1.0.2\Criador de tabelas\bin\Debug\CriadorTabelas.exe
+C:\Users\SAPDEVB1\Desktop\Criador de tabelas - 1.0.2\Criador de tabelas\bin\Debug\CriadorTabelas.pdb
+C:\Users\SAPDEVB1\Desktop\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.AssemblyReference.cache
+C:\Users\SAPDEVB1\Desktop\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\Interop.SAPbobsCOM.dll
+C:\Users\SAPDEVB1\Desktop\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\Interop.SAPbouiCOM.dll
+C:\Users\SAPDEVB1\Desktop\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.ResolveComReference.cache
+C:\Users\SAPDEVB1\Desktop\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\TesteCriadorTabelas.formCriadorTabelas.resources
+C:\Users\SAPDEVB1\Desktop\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.Properties.Resources.resources
+C:\Users\SAPDEVB1\Desktop\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.UserLogin.resources
+C:\Users\SAPDEVB1\Desktop\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.GenerateResource.cache
+C:\Users\SAPDEVB1\Desktop\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.CoreCompileInputs.cache
+C:\Users\SAPDEVB1\Desktop\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.exe.manifest
+C:\Users\SAPDEVB1\Desktop\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.application
+C:\Users\SAPDEVB1\Desktop\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.exe
+C:\Users\SAPDEVB1\Desktop\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.pdb
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas\bin\Debug\CriadorTabelas.exe.config
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas\bin\Debug\CriadorTabelas.exe.manifest
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas\bin\Debug\CriadorTabelas.application
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas\bin\Debug\CriadorTabelas.exe
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas\bin\Debug\CriadorTabelas.pdb
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.AssemblyReference.cache
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\Interop.SAPbobsCOM.dll
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\Interop.SAPbouiCOM.dll
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.ResolveComReference.cache
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\TesteCriadorTabelas.formCriadorTabelas.resources
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.Properties.Resources.resources
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.UserLogin.resources
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.GenerateResource.cache
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.CoreCompileInputs.cache
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.exe.manifest
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.application
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.exe
+C:\Users\igor.oliveira\Downloads\Criador de tabelas - 1.0.2\Criador de tabelas\obj\Debug\CriadorTabelas.pdb
+C:\Users\SAPB1DEV\Desktop\Desenvolvimento SAP\Criador de tabelas - v1.0.5\Criador de tabelas\bin\Debug\CriadorTabelas.exe.config
+C:\Users\SAPB1DEV\Desktop\Desenvolvimento SAP\Criador de tabelas - v1.0.5\Criador de tabelas\bin\Debug\CriadorTabelas.exe.manifest
+C:\Users\SAPB1DEV\Desktop\Desenvolvimento SAP\Criador de tabelas - v1.0.5\Criador de tabelas\bin\Debug\CriadorTabelas.application
+C:\Users\SAPB1DEV\Desktop\Desenvolvimento SAP\Criador de tabelas - v1.0.5\Criador de tabelas\bin\Debug\CriadorTabelas.exe
+C:\Users\SAPB1DEV\Desktop\Desenvolvimento SAP\Criador de tabelas - v1.0.5\Criador de tabelas\bin\Debug\CriadorTabelas.pdb
+C:\Users\SAPB1DEV\Desktop\Desenvolvimento SAP\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.AssemblyReference.cache
+C:\Users\SAPB1DEV\Desktop\Desenvolvimento SAP\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\Interop.SAPbobsCOM.dll
+C:\Users\SAPB1DEV\Desktop\Desenvolvimento SAP\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\Interop.SAPbouiCOM.dll
+C:\Users\SAPB1DEV\Desktop\Desenvolvimento SAP\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.ResolveComReference.cache
+C:\Users\SAPB1DEV\Desktop\Desenvolvimento SAP\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\TesteCriadorTabelas.formCriadorTabelas.resources
+C:\Users\SAPB1DEV\Desktop\Desenvolvimento SAP\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.Properties.Resources.resources
+C:\Users\SAPB1DEV\Desktop\Desenvolvimento SAP\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.UserLogin.resources
+C:\Users\SAPB1DEV\Desktop\Desenvolvimento SAP\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.GenerateResource.cache
+C:\Users\SAPB1DEV\Desktop\Desenvolvimento SAP\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.CoreCompileInputs.cache
+C:\Users\SAPB1DEV\Desktop\Desenvolvimento SAP\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.exe.manifest
+C:\Users\SAPB1DEV\Desktop\Desenvolvimento SAP\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.application
+C:\Users\SAPB1DEV\Desktop\Desenvolvimento SAP\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.exe
+C:\Users\SAPB1DEV\Desktop\Desenvolvimento SAP\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.pdb
+C:\Users\igor.oliveira\Desktop\SAP Migration\Criador de tabelas - v1.0.5\Criador de tabelas - v1.0.5\Criador de tabelas\bin\Debug\CriadorTabelas.exe.config
+C:\Users\igor.oliveira\Desktop\SAP Migration\Criador de tabelas - v1.0.5\Criador de tabelas - v1.0.5\Criador de tabelas\bin\Debug\CriadorTabelas.exe.manifest
+C:\Users\igor.oliveira\Desktop\SAP Migration\Criador de tabelas - v1.0.5\Criador de tabelas - v1.0.5\Criador de tabelas\bin\Debug\CriadorTabelas.application
+C:\Users\igor.oliveira\Desktop\SAP Migration\Criador de tabelas - v1.0.5\Criador de tabelas - v1.0.5\Criador de tabelas\bin\Debug\CriadorTabelas.exe
+C:\Users\igor.oliveira\Desktop\SAP Migration\Criador de tabelas - v1.0.5\Criador de tabelas - v1.0.5\Criador de tabelas\bin\Debug\CriadorTabelas.pdb
+C:\Users\igor.oliveira\Desktop\SAP Migration\Criador de tabelas - v1.0.5\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.AssemblyReference.cache
+C:\Users\igor.oliveira\Desktop\SAP Migration\Criador de tabelas - v1.0.5\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\Interop.SAPbobsCOM.dll
+C:\Users\igor.oliveira\Desktop\SAP Migration\Criador de tabelas - v1.0.5\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\Interop.SAPbouiCOM.dll
+C:\Users\igor.oliveira\Desktop\SAP Migration\Criador de tabelas - v1.0.5\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.ResolveComReference.cache
+C:\Users\igor.oliveira\Desktop\SAP Migration\Criador de tabelas - v1.0.5\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\TesteCriadorTabelas.formCriadorTabelas.resources
+C:\Users\igor.oliveira\Desktop\SAP Migration\Criador de tabelas - v1.0.5\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.Properties.Resources.resources
+C:\Users\igor.oliveira\Desktop\SAP Migration\Criador de tabelas - v1.0.5\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.UserLogin.resources
+C:\Users\igor.oliveira\Desktop\SAP Migration\Criador de tabelas - v1.0.5\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.GenerateResource.cache
+C:\Users\igor.oliveira\Desktop\SAP Migration\Criador de tabelas - v1.0.5\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.CoreCompileInputs.cache
+C:\Users\igor.oliveira\Desktop\SAP Migration\Criador de tabelas - v1.0.5\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.exe.manifest
+C:\Users\igor.oliveira\Desktop\SAP Migration\Criador de tabelas - v1.0.5\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.application
+C:\Users\igor.oliveira\Desktop\SAP Migration\Criador de tabelas - v1.0.5\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.exe
+C:\Users\igor.oliveira\Desktop\SAP Migration\Criador de tabelas - v1.0.5\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.pdb
+C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\bin\Debug\CriadorTabelas.exe.config
+C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\bin\Debug\CriadorTabelas.exe.manifest
+C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\bin\Debug\CriadorTabelas.application
+C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\bin\Debug\CriadorTabelas.exe
+C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\bin\Debug\CriadorTabelas.pdb
+C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.AssemblyReference.cache
+C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\Interop.SAPbobsCOM.dll
+C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\Interop.SAPbouiCOM.dll
+C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.ResolveComReference.cache
+C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\TesteCriadorTabelas.formCriadorTabelas.resources
+C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.Properties.Resources.resources
+C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.UserLogin.resources
+C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.GenerateResource.cache
+C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.CoreCompileInputs.cache
+C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.exe.manifest
+C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.application
+C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.exe
+C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.pdb

@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34407.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CriadorTabelas", "Criador de tabelas\CriadorTabelas.csproj", "{FBDD174C-DA70-4E67-8DB3-7723FA732E48}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{4A7778F0-8B3A-437E-840C-A891F27A3E28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBDD174C-DA70-4E67-8DB3-7723FA732E48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBDD174C-DA70-4E67-8DB3-7723FA732E48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBDD174C-DA70-4E67-8DB3-7723FA732E48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBDD174C-DA70-4E67-8DB3-7723FA732E48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A7778F0-8B3A-437E-840C-A891F27A3E28}.Debug|Any CPU.ActiveCfg = Debug
+		{4A7778F0-8B3A-437E-840C-A891F27A3E28}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45FACC1D-EA30-4F79-9A55-210DE52D4B1A}
+	EndGlobalSection
+EndGlobal
