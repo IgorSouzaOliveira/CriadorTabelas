@@ -88,7 +88,7 @@
     <Compile Include="Entities\CreateFieldsHand.cs" />
     <Compile Include="Entities\CreateTable.cs" />
     <Compile Include="Entities\CreateUDO.cs" />
-    <Compile Include="Entities\ExceptionError.cs" />
+    <Compile Include="Entities\LogCreate.cs" />
     <Compile Include="Views\CriadorTabelas.cs">
       <SubType>Form</SubType>
     </Compile>

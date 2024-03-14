@@ -167,7 +167,7 @@ namespace CriadorTabelas
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(67, 13);
             this.lblVersion.TabIndex = 53;
-            this.lblVersion.Text = "Versão 1.0.6";
+            this.lblVersion.Text = "Versão 1.0.7";
             // 
             // UserLogin
             // 

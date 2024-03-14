@@ -8,17 +8,19 @@ namespace CriadorTabelas
 {
     class CreateFields
     {
-
-        StreamWriter sw = new StreamWriter("C:\\LogCriadorCampos.txt");
-
         private Company oCompany = new Company();
-        UserFieldsMD oUserFieldsMD;
+        
         private int lRetCode;
         public ConnectionDB oConnectionDB { get; set; } = new ConnectionDB();
-
         public void CreateFieldsSAP()
         {
             oConnectionDB.OpenConnection();
+            UserFieldsMD oUserFieldsMD = null;
+            oUserFieldsMD = (UserFieldsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
+
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(oUserFieldsMD);
+            oUserFieldsMD = null;
+            GC.Collect();
             oUserFieldsMD = (UserFieldsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
 
             try
@@ -254,38 +256,40 @@ namespace CriadorTabelas
             {
 
                 throw;
-            }  
-            
+            }
+
             System.Runtime.InteropServices.Marshal.ReleaseComObject(oUserFieldsMD);
-            GC.WaitForPendingFinalizers();
+            oUserFieldsMD = null;
             GC.Collect();
-            sw.Close();
+            
             oConnectionDB.CloseConnection();
             MessageBox.Show("Processo de criação finalizado.");
         }
 
         private void ExceptionError(int lretcode, UserFieldsMD oUserFieldsMD)
         {
+            LogCreate oLogCreate = new LogCreate();
+
             int errorCode = lretcode;
             string errorMsg;
 
             switch (errorCode)
             {
                 case 0:
-                    sw.WriteLine($"[Sucesso] - Campo: {oUserFieldsMD.Name} criado com sucesso.");
+                    oLogCreate.Log($"[Sucesso] - Campo: {oUserFieldsMD.Name} criado com sucesso.");
                     break;
 
                 case -2035:
-                    sw.WriteLine($"[Aviso] - Campo: {oUserFieldsMD.Name}, já existe na base de dados.");
+                    oLogCreate.Log($"[Aviso] - Campo: {oUserFieldsMD.Name}, já existe na base de dados.");
                     break;
 
                 case -5002:
-                    sw.WriteLine($"[Aviso] - Campo: {oUserFieldsMD.Name}, já existe na base de dados.");
+                    oLogCreate.Log($"[Aviso] - Campo: {oUserFieldsMD.Name}, já existe na base de dados.");
                     break;
 
                 default:
                     oCompany.GetLastError(out errorCode, out errorMsg);
-                    sw.WriteLine($"[Erro]: {errorCode}, Mensagem: {errorMsg}");
+                    oLogCreate.Log($"[Erro]: {errorCode}, Mensagem: {errorMsg}");
                     break;
             }
 

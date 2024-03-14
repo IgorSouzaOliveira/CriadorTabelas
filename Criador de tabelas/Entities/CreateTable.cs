@@ -8,16 +8,20 @@ namespace CriadorTabelas
 {
     class CreateTable
     {
-
-        StreamWriter sw = new StreamWriter("C:\\LogCriadorTabelas.txt");
         private Company oCompany = new Company();
-        UserTablesMD oUserTablesMD;
+        
         private int lRetCode;
         public ConnectionDB oConnectionDB { get; set; } = new ConnectionDB();
         public void CreateTableSAP()
         {
 
             oConnectionDB.OpenConnection();
+            UserTablesMD oUserTablesMD = null;
+            oUserTablesMD = (UserTablesMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserTables);
+
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(oUserTablesMD);
+            oUserTablesMD = null;
+            GC.Collect();
             oUserTablesMD = (UserTablesMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserTables);
 
             /* Tabela de configuraçao do Add-on*/
@@ -55,32 +59,33 @@ namespace CriadorTabelas
             System.Runtime.InteropServices.Marshal.ReleaseComObject(oUserTablesMD);
             oUserTablesMD = null;
             GC.Collect();
-            sw.Close();
             oConnectionDB.CloseConnection();
             MessageBox.Show("Processo de criação finalizado.");
         }
         private void ExceptionError(int lretcode, UserTablesMD oUserTablesMD)
         {
+            LogCreate oLogCreate = new LogCreate();
+
             int errorCode = lretcode;
             string errorMsg;
 
             switch (errorCode)
             {
                 case 0:
-                    MessageBox.Show($"[Sucesso] - Tabela: [@{oUserTablesMD.TableName}] criada com sucesso.");
+                    oLogCreate.Log($"[Sucesso] - Tabela: [@{oUserTablesMD.TableName}] criada com sucesso.");
                     break;
 
                 case -2035:
-                    MessageBox.Show($"[Aviso] - Tabela: [@{oUserTablesMD.TableName}], já existe na base de dados.");
+                    oLogCreate.Log($"[Aviso] - Tabela: [@{oUserTablesMD.TableName}], já existe na base de dados.");
                     break;
 
                 case -5002:
-                    MessageBox.Show($"[Aviso] - Campo: [@{oUserTablesMD.TableName}], já existe na base de dados.");
+                    oLogCreate.Log($"[Aviso] - Campo: [@{oUserTablesMD.TableName}], já existe na base de dados.");
                     break;
 
                 default:
                     oCompany.GetLastError(out errorCode, out errorMsg);
-                    MessageBox.Show($"[Erro]: {errorCode}, Mensagem: {errorMsg}");
+                    oLogCreate.Log($"[Erro]: {errorCode}, Mensagem: {errorMsg}");
                     break;
             }
         }

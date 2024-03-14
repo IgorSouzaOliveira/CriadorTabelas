@@ -8,8 +8,7 @@ namespace CriadorTabelas.Classes
     public class CreateFieldsHand
     {
         public Company oCompany = new Company();
-        UserFieldsMD oUserFieldsMD;
-
+        
         private int lRetCode;
         private string tablename { get; set; }
         private string name { get; set; }
@@ -34,7 +33,13 @@ namespace CriadorTabelas.Classes
         private void CreateFields()
         {
             oConnectionDB.OpenConnection();
+            UserFieldsMD oUserFieldsMD = null;
             oUserFieldsMD = ((UserFieldsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserFields));
+
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(oUserFieldsMD);
+            oUserFieldsMD = null;
+            GC.Collect();
+            oUserFieldsMD = (UserFieldsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
 
             try
             {
@@ -87,8 +92,9 @@ namespace CriadorTabelas.Classes
 
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(oUserFieldsMD);
                 oUserFieldsMD = null;
-                oConnectionDB.CloseConnection();
                 GC.Collect();
+                oConnectionDB.CloseConnection();
+                MessageBox.Show("Processo finalizado. Verificar Log no caminho: 'C:\\LogCreate.txt'");
 
             }
             catch (Exception ex)
@@ -98,26 +104,27 @@ namespace CriadorTabelas.Classes
         }
         private void ExceptionError(int lretcode, UserFieldsMD oUserFieldsMD)
         {
+            LogCreate oLogCreate = new LogCreate();
             int errorCode = lretcode;
-            string errorMsg;
+            string errorMsg;            
 
             switch (errorCode)
             {
                 case 0:
-                    MessageBox.Show($"[Sucesso] - Campo: {oUserFieldsMD.Name} criado com sucesso na Tabela: {oUserFieldsMD.TableName}");
+                     oLogCreate.Log($"[Sucesso] - Campo: {oUserFieldsMD.Name} criado com sucesso na Tabela:{oUserFieldsMD.TableName}");
                     break;
 
                 case -2035:
-                    MessageBox.Show($"[Aviso] - Campo: {oUserFieldsMD.Name}, já existe na base de dados.");
+                    oLogCreate.Log($"[Aviso] - Campo: {oUserFieldsMD.Name}, já existe na base de dados.");
                     break;
 
                 case -5002:
-                    MessageBox.Show($"[Aviso] - Campo: {oUserFieldsMD.Name}, já existe na base de dados.");
+                    oLogCreate.Log($"[Aviso] - Campo: {oUserFieldsMD.Name}, já existe na base de dados.");
                     break;
 
                 default:
                     oCompany.GetLastError(out errorCode, out errorMsg);
-                    MessageBox.Show($"[Erro]: {errorCode}, Mensagem: {errorMsg}");
+                    oLogCreate.Log($"[Erro]: {errorCode}, Mensagem: {errorMsg}");
                     break;
             }
 

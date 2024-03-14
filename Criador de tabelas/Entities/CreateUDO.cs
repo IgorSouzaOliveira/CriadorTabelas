@@ -9,9 +9,9 @@ namespace CriadorTabelas
 {
     class CreateUDO
     {
-        StreamWriter sw = new StreamWriter("C:\\LogCriadorUDO.txt");
+       
         public Company oCompany = new Company();
-        UserObjectsMD oUserObjectsMD;
+        
         private int lRetCode;
         public ConnectionDB oConnectionDB { get; set; } = new ConnectionDB();
 
@@ -20,8 +20,14 @@ namespace CriadorTabelas
             try
             {
                 oConnectionDB.OpenConnection();
+                UserObjectsMD oUserObjectsMD = null;
                 oUserObjectsMD = (UserObjectsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserObjectsMD);
-                
+
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(oUserObjectsMD);
+                oUserObjectsMD = null;
+                GC.Collect();
+                oUserObjectsMD = (UserObjectsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserObjectsMD);
+
                 oUserObjectsMD.Code = "SOCONF";
                 oUserObjectsMD.Name = "SO: Configuração SO Solutions";
                 oUserObjectsMD.ObjectType = BoUDOObjType.boud_MasterData;
@@ -42,9 +48,8 @@ namespace CriadorTabelas
                 ExceptionError(lRetCode, oUserObjectsMD);
 
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(oUserObjectsMD);
+                oUserObjectsMD = null;
                 GC.Collect();
-                GC.WaitForPendingFinalizers();
-                sw.Close();
                 oConnectionDB.CloseConnection();
                 MessageBox.Show("Processo de criação finalizado.");
             }
@@ -57,26 +62,29 @@ namespace CriadorTabelas
         }
         private void ExceptionError(int lretcode, UserObjectsMD oUserObjectsMD)
         {
+            LogCreate oLogCreate = new LogCreate();
+                     
+
             int errorCode = lretcode;
             string errorMsg;
 
             switch (errorCode)
             {
                 case 0:
-                    sw.WriteLine($"[Sucesso] - Objeto: {oUserObjectsMD.Name} criado com sucesso.");
+                    oLogCreate.Log($"[Sucesso] - Objeto: {oUserObjectsMD.Name} criado com sucesso.");
                     break;
 
                 case -2035:
-                    sw.WriteLine($"[Aviso] - Objeto: {oUserObjectsMD.Name}, já existe na base de dados.");
+                    oLogCreate.Log($"[Aviso] - Objeto: {oUserObjectsMD.Name}, já existe na base de dados.");
                     break;
 
                 case -5002:
-                    sw.WriteLine($"[Aviso] - Objeto: {oUserObjectsMD.Name}, já existe na base de dados.");
+                    oLogCreate.Log($"[Aviso] - Objeto: {oUserObjectsMD.Name}, já existe na base de dados.");
                     break;
 
                 default:
                     oCompany.GetLastError(out errorCode, out errorMsg);
-                    sw.WriteLine($"[Erro]: {errorCode}, Mensagem: {errorMsg}");
+                    oLogCreate.Log($"[Erro]: {errorCode}, Mensagem: {errorMsg}");
                     break;
             }
 

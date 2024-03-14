@@ -178,3 +178,21 @@ C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\Criado
 C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.application
 C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.exe
 C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Debug\CriadorTabelas.pdb
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Debug\CriadorTabelas.exe.config
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Debug\CriadorTabelas.exe.manifest
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Debug\CriadorTabelas.application
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Debug\CriadorTabelas.exe
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Debug\CriadorTabelas.pdb
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.AssemblyReference.cache
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Debug\Interop.SAPbobsCOM.dll
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Debug\Interop.SAPbouiCOM.dll
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.ResolveComReference.cache
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Debug\TesteCriadorTabelas.formCriadorTabelas.resources
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Debug\CriadorTabelas.Properties.Resources.resources
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Debug\CriadorTabelas.UserLogin.resources
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.GenerateResource.cache
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.CoreCompileInputs.cache
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Debug\CriadorTabelas.exe.manifest
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Debug\CriadorTabelas.application
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Debug\CriadorTabelas.exe
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Debug\CriadorTabelas.pdb

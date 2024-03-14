@@ -200,3 +200,21 @@ C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Release\Cria
 C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Release\CriadorTabelas.application
 C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Release\CriadorTabelas.exe
 C:\temp\projetos\Criador de tabelas - v1.0.5\Criador de tabelas\obj\Release\CriadorTabelas.pdb
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Release\CriadorTabelas.exe.config
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Release\CriadorTabelas.exe.manifest
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Release\CriadorTabelas.application
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Release\CriadorTabelas.exe
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Release\CriadorTabelas.pdb
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Release\CriadorTabelas.csproj.AssemblyReference.cache
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Release\Interop.SAPbobsCOM.dll
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Release\Interop.SAPbouiCOM.dll
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Release\CriadorTabelas.csproj.ResolveComReference.cache
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Release\TesteCriadorTabelas.formCriadorTabelas.resources
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Release\CriadorTabelas.Properties.Resources.resources
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Release\CriadorTabelas.UserLogin.resources
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Release\CriadorTabelas.csproj.GenerateResource.cache
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Release\CriadorTabelas.csproj.CoreCompileInputs.cache
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Release\CriadorTabelas.exe.manifest
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Release\CriadorTabelas.application
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Release\CriadorTabelas.exe
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Release\CriadorTabelas.pdb
