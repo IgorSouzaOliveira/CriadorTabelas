@@ -8,10 +8,10 @@ namespace CriadorTabelas.Classes
     public class CreateFieldsHand
     {
         public Company oCompany = new Company();
-        
+        UserFieldsMD oUserFieldsMD;
+
         private int lRetCode;
-        private string tablename { get; set; }
-        private string name { get; set; }
+        private string tablename { get; set; }private string name { get; set; }
         private string description { get; set; }
         private object type { get; set; }
         private object subtype { get; set; }
@@ -33,12 +33,6 @@ namespace CriadorTabelas.Classes
         private void CreateFields()
         {
             oConnectionDB.OpenConnection();
-            UserFieldsMD oUserFieldsMD = null;
-            oUserFieldsMD = ((UserFieldsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserFields));
-
-            System.Runtime.InteropServices.Marshal.ReleaseComObject(oUserFieldsMD);
-            oUserFieldsMD = null;
-            GC.Collect();
             oUserFieldsMD = (UserFieldsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
 
             try
@@ -94,8 +88,7 @@ namespace CriadorTabelas.Classes
                 oUserFieldsMD = null;
                 GC.Collect();
                 oConnectionDB.CloseConnection();
-                MessageBox.Show("Processo finalizado. Verificar Log no caminho: 'C:\\LogCreate.txt'");
-
+                
             }
             catch (Exception ex)
             {

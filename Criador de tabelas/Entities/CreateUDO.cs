@@ -51,7 +51,7 @@ namespace CriadorTabelas
                 oUserObjectsMD = null;
                 GC.Collect();
                 oConnectionDB.CloseConnection();
-                MessageBox.Show("Processo de criação finalizado.");
+                
             }
             catch (Exception)
             {

@@ -260,10 +260,8 @@ namespace CriadorTabelas
 
             System.Runtime.InteropServices.Marshal.ReleaseComObject(oUserFieldsMD);
             oUserFieldsMD = null;
-            GC.Collect();
-            
-            oConnectionDB.CloseConnection();
-            MessageBox.Show("Processo de criação finalizado.");
+            GC.Collect();            
+            oConnectionDB.CloseConnection();            
         }
 
         private void ExceptionError(int lretcode, UserFieldsMD oUserFieldsMD)

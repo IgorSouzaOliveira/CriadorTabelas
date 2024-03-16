@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using SAPbobsCOM;
 using CriadorTabelas;
 using CriadorTabelas.Classes;
+using CriadorTabelas.Entities;
 
 namespace TesteCriadorTabelas
 {
@@ -13,126 +14,65 @@ namespace TesteCriadorTabelas
         public string sErrMsg;
         public long lErrCode;
         public long lRetCode;
-        BoDataServerTypes dbservertype = 0;
         CreateTable oCreateTable = new CreateTable();
         CreateFields oCreateFields = new CreateFields();
         CreateUDO oCreateUDO = new CreateUDO();
-
+        
         public formCriadorTabelas()
         {
             InitializeComponent();
         }
 
-        private void btnConnect_Click(object sender, EventArgs e)
-        {
-            Connect();
-        }
 
+        //private void DbServerType(string cbxversiondb)
+        //{
+        //    switch (cbxVersionDB.Text)
+        //    {
+        //        case "dts_DB_2":
+        //            dbservertype = BoDataServerTypes.dst_DB_2;
+        //            break;
 
-        private void DbServerType(string cbxversiondb)
-        {
-            switch (cbxVersionDB.Text)
-            {
-                case "dts_DB_2":
-                    dbservertype = BoDataServerTypes.dst_DB_2;
-                    break;
+        //        case "dst_HANADB":
+        //            dbservertype = BoDataServerTypes.dst_HANADB;
+        //            break;
+        //        case "dst_MAXDB":
+        //            dbservertype = BoDataServerTypes.dst_MAXDB;
+        //            break;
+        //        case "dst_MSSQL":
+        //            dbservertype = BoDataServerTypes.dst_MSSQL;
+        //            break;
+        //        case "dst_MSSQL2005":
+        //            dbservertype = BoDataServerTypes.dst_MSSQL2005;
+        //            break;
+        //        case "dst_MSSQL2008":
+        //            dbservertype = BoDataServerTypes.dst_MSSQL2008;
+        //            break;
+        //        case "dst_MSSQL2012":
+        //            dbservertype = BoDataServerTypes.dst_MSSQL2012;
+        //            break;
+        //        case "dst_MSSQL2014":
+        //            dbservertype = BoDataServerTypes.dst_MSSQL2014;
+        //            break;
+        //        case "dst_MSSQL2016":
+        //            dbservertype = BoDataServerTypes.dst_MSSQL2016;
+        //            break;
+        //        case "dst_MSSQL2017":
+        //            dbservertype = BoDataServerTypes.dst_MSSQL2017;
+        //            break;
+        //        case "dst_MSSQL2019":
+        //            dbservertype = BoDataServerTypes.dst_MSSQL2019;
+        //            break;
 
-                case "dst_HANADB":
-                    dbservertype = BoDataServerTypes.dst_HANADB;
-                    break;
-                case "dst_MAXDB":
-                    dbservertype = BoDataServerTypes.dst_MAXDB;
-                    break;
-                case "dst_MSSQL":
-                    dbservertype = BoDataServerTypes.dst_MSSQL;
-                    break;
-                case "dst_MSSQL2005":
-                    dbservertype = BoDataServerTypes.dst_MSSQL2005;
-                    break;
-                case "dst_MSSQL2008":
-                    dbservertype = BoDataServerTypes.dst_MSSQL2008;
-                    break;
-                case "dst_MSSQL2012":
-                    dbservertype = BoDataServerTypes.dst_MSSQL2012;
-                    break;
-                case "dst_MSSQL2014":
-                    dbservertype = BoDataServerTypes.dst_MSSQL2014;
-                    break;
-                case "dst_MSSQL2016":
-                    dbservertype = BoDataServerTypes.dst_MSSQL2016;
-                    break;
-                case "dst_MSSQL2017":
-                    dbservertype = BoDataServerTypes.dst_MSSQL2017;
-                    break;
-                case "dst_MSSQL2019":
-                    dbservertype = BoDataServerTypes.dst_MSSQL2019;
-                    break;
+        //        case "dst_SYBASE":
+        //            dbservertype = BoDataServerTypes.dst_SYBASE;
+        //            break;
 
-                case "dst_SYBASE":
-                    dbservertype = BoDataServerTypes.dst_SYBASE;
-                    break;
-
-            }
-        }
-
-        public void Connect()
-        {
-            DbServerType(cbxversiondb: cbxVersionDB.Text);
-
-            oCompany.Server = txtServer.Text;
-            oCompany.CompanyDB = txtCompany.Text;
-            oCompany.UserName = txtUserC.Text;
-            oCompany.Password = txtUserPass.Text;
-            oCompany.language = BoSuppLangs.ln_Portuguese_Br;
-            oCompany.DbServerType = dbservertype;
-            oCompany.DbUserName = txtUserDB.Text;
-            oCompany.DbPassword = txtUPasswBD.Text;
-            oCompany.LicenseServer = txtLicenServer.Text;
-
-            lRetCode = oCompany.Connect();
-
-            if (lRetCode != 0)
-            {
-                int errorCode;
-                string errorMsg;
-                oCompany.GetLastError(out errorCode, out errorMsg);
-                MessageBox.Show($"[Erro]: {errorCode}, Mensagem: {errorMsg}");
-            }
-            else
-            {
-                MessageBox.Show("Conexão realizada com sucesso.");
-            }
-
-        }
-
-        private void btnDesconect_Click_1(object sender, EventArgs e)
-        {
-            oCompany.Disconnect();
-            GC.Collect();
-            MessageBox.Show("Desconectado com sucesso.");
-        }
-
-        /* Criar tabela(s)na base de dados */
-        private void btnCreateTable_Click(object sender, EventArgs e)
-        {            
-            oCreateTable.CreateTableSAP();
-        }
-
-        /* Criar coluna(s)na base de dados */
-        private void btnCriarCol_Click_1(object sender, EventArgs e)
-        {
-            oCreateFields.CreateFieldsSAP();
-        }
-
-        /* Criar objeto(s) na base de dados */
-        private void btnRegUDO_Click_1(object sender, EventArgs e)
-        {
-            oCreateUDO.CreateUDOSAP();
-        }
+        //    }
+        //}
 
         private void StripMenuSair_Click(object sender, EventArgs e)
         {
-            Application.ExitThread();
+            Application.Exit();            
         }
 
         private void cbxTipo_SelectedIndexChanged(object sender, EventArgs e)
@@ -317,7 +257,29 @@ namespace TesteCriadorTabelas
             }
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLog.LinkVisited = true;
+            System.Diagnostics.Process.Start(@"C:\LogCreate.txt");
+        }
 
+        private void btnExec_Click(object sender, EventArgs e)
+        {
+            lblReturn.Text = "Processo em andamento. Aguarde...";
+            lblReturn.Refresh();
+            progressBar.Value = 50;            
+            oCreateTable.CreateTableSAP();
+            oCreateFields.CreateFieldsSAP();
+            oCreateUDO.CreateUDOSAP();
+            progressBar.Value = 100;
+            lblReturn.Text = "Processo Finalizado.";
+            
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 
 }

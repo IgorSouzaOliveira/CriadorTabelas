@@ -60,7 +60,7 @@ namespace CriadorTabelas
             oUserTablesMD = null;
             GC.Collect();
             oConnectionDB.CloseConnection();
-            MessageBox.Show("Processo de criação finalizado.");
+            
         }
         private void ExceptionError(int lretcode, UserTablesMD oUserTablesMD)
         {
