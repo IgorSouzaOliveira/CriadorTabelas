@@ -17,7 +17,8 @@ namespace TesteCriadorTabelas
         CreateTable oCreateTable = new CreateTable();
         CreateFields oCreateFields = new CreateFields();
         CreateUDO oCreateUDO = new CreateUDO();
-        
+        public ExecuteQuerySQL oExecuteQuerySQL { get; private set; } = new ExecuteQuerySQL();
+
         public formCriadorTabelas()
         {
             InitializeComponent();
@@ -271,6 +272,7 @@ namespace TesteCriadorTabelas
             oCreateTable.CreateTableSAP();
             oCreateFields.CreateFieldsSAP();
             oCreateUDO.CreateUDOSAP();
+            oExecuteQuerySQL.CreateProc();
             progressBar.Value = 100;
             lblReturn.Text = "Processo Finalizado.";
             

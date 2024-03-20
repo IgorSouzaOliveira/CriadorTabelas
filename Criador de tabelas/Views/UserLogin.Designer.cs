@@ -42,6 +42,7 @@ namespace CriadorTabelas
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblVersion = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -163,11 +164,20 @@ namespace CriadorTabelas
             // lblVersion
             // 
             this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(324, 543);
+            this.lblVersion.Location = new System.Drawing.Point(674, 543);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(67, 13);
             this.lblVersion.TabIndex = 53;
-            this.lblVersion.Text = "Versão 1.0.8";
+            this.lblVersion.Text = "Versão 1.0.9";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(302, 543);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(182, 13);
+            this.label1.TabIndex = 54;
+            this.label1.Text = "Desenvolvido por Igor Oliveira - 2024";
             // 
             // UserLogin
             // 
@@ -176,6 +186,7 @@ namespace CriadorTabelas
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(753, 565);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblVersion);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -215,5 +226,6 @@ namespace CriadorTabelas
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label lblVersion;
+        private System.Windows.Forms.Label label1;
     }
 }
