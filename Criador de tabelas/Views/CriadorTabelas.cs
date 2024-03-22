@@ -4,6 +4,7 @@ using SAPbobsCOM;
 using CriadorTabelas;
 using CriadorTabelas.Classes;
 using CriadorTabelas.Entities;
+using System.IO;
 
 namespace TesteCriadorTabelas
 {
@@ -261,21 +262,24 @@ namespace TesteCriadorTabelas
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             linkLog.LinkVisited = true;
-            System.Diagnostics.Process.Start(@"C:\LogCreate.txt");
+            System.Diagnostics.Process.Start(@"C:\LogDeCriação.txt");
         }
 
         private void btnExec_Click(object sender, EventArgs e)
         {
+
+            const string path = @"C:\LogDeCriação.txt";
+            File.Delete(path);
+
             lblReturn.Text = "Processo em andamento. Aguarde...";
             lblReturn.Refresh();
-            progressBar.Value = 50;            
+            progressBar.Value = 50;
             oCreateTable.CreateTableSAP();
             oCreateFields.CreateFieldsSAP();
             oCreateUDO.CreateUDOSAP();
             oExecuteQuerySQL.CreateProc();
             progressBar.Value = 100;
             lblReturn.Text = "Processo Finalizado.";
-            
         }
 
         private void btnExit_Click(object sender, EventArgs e)

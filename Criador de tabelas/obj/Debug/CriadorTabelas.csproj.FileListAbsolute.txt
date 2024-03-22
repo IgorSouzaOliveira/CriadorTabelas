@@ -266,3 +266,8 @@ C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Debug\zh-Hans\Microsoft.D
 C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Debug\CriadorTabelas.Resources.Resource.resources
 C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.CopyComplete
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Debug\Resources\Imagens\GifSAP.gif
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Debug\Resources\Imagens\SAP-Business-One.png
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Debug\Resources\Imagens\trancar.png
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Debug\Resources\Imagens\login-de-usuario.png
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Debug\Resources\Imagens\OIP.jpg

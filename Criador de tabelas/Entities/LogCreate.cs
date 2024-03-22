@@ -5,16 +5,17 @@ namespace CriadorTabelas.Entities
 {
     public class LogCreate
     {
-        
+
         public LogCreate()
         {
 
         }
 
-        const string path = @"C:\LogCreate.txt";
+        const string path = @"C:\LogDeCriação.txt";
 
         public void Log(string swLog)
         {
+
             try
             {
                 var file = File.AppendText(path);
@@ -27,7 +28,7 @@ namespace CriadorTabelas.Entities
 
                 throw;
             }
-          
-        }      
+
+        }
     }
 }

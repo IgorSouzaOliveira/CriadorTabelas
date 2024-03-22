@@ -38,6 +38,8 @@ namespace TesteCriadorTabelas
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formCriadorTabelas));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPag2 = new System.Windows.Forms.TabPage();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblReturn = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
             this.btnExec = new System.Windows.Forms.Button();
@@ -68,16 +70,14 @@ namespace TesteCriadorTabelas
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblInfo = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnExit = new System.Windows.Forms.Button();
             this.DateNow = new System.Windows.Forms.DateTimePicker();
             this.tabControl.SuspendLayout();
             this.tabPag2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
@@ -107,6 +107,25 @@ namespace TesteCriadorTabelas
             this.tabPag2.TabIndex = 0;
             this.tabPag2.Text = "Criador AddOn ";
             this.tabPag2.UseVisualStyleBackColor = true;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(89, 379);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 68;
+            this.btnExit.Text = "Sair";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(117, 88);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(501, 181);
+            this.pictureBox3.TabIndex = 67;
+            this.pictureBox3.TabStop = false;
             // 
             // lblReturn
             // 
@@ -152,17 +171,17 @@ namespace TesteCriadorTabelas
             this.linkLog.AutoSize = true;
             this.linkLog.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLog.Location = new System.Drawing.Point(704, 382);
+            this.linkLog.Location = new System.Drawing.Point(670, 379);
             this.linkLog.Name = "linkLog";
-            this.linkLog.Size = new System.Drawing.Size(31, 16);
+            this.linkLog.Size = new System.Drawing.Size(67, 16);
             this.linkLog.TabIndex = 62;
             this.linkLog.TabStop = true;
-            this.linkLog.Text = "Log";
+            this.linkLog.Text = "Exibir Log";
             this.linkLog.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CriadorTabelas.Properties.Resources.SAP_Business_One;
+            this.pictureBox1.Image = global::CriadorTabelas.Resources.Resource.SAP_Business_One;
             this.pictureBox1.Location = new System.Drawing.Point(0, 439);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(97, 73);
@@ -197,7 +216,7 @@ namespace TesteCriadorTabelas
             this.tb.Location = new System.Drawing.Point(4, 22);
             this.tb.Name = "tb";
             this.tb.Padding = new System.Windows.Forms.Padding(3);
-            this.tb.Size = new System.Drawing.Size(745, 514);
+            this.tb.Size = new System.Drawing.Size(740, 514);
             this.tb.TabIndex = 1;
             this.tb.Text = "Campo(s) Avulso(s)";
             this.tb.UseVisualStyleBackColor = true;
@@ -409,32 +428,13 @@ namespace TesteCriadorTabelas
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::CriadorTabelas.Properties.Resources.SAP_Business_One;
+            this.pictureBox2.Image = global::CriadorTabelas.Resources.Resource.SAP_Business_One;
             this.pictureBox2.Location = new System.Drawing.Point(0, 439);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(97, 73);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 52;
             this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(117, 88);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(501, 181);
-            this.pictureBox3.TabIndex = 67;
-            this.pictureBox3.TabStop = false;
-            // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(89, 379);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 68;
-            this.btnExit.Text = "Sair";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // DateNow
             // 
@@ -463,12 +463,12 @@ namespace TesteCriadorTabelas
             this.tabControl.ResumeLayout(false);
             this.tabPag2.ResumeLayout(false);
             this.tabPag2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tb.ResumeLayout(false);
             this.tb.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -61,7 +61,57 @@ namespace CriadorTabelas.Resources {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a 
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GifSAP {
+            get {
+                object obj = ResourceManager.GetObject("GifSAP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Icon semelhante a (Ícone).
+        /// </summary>
+        internal static System.Drawing.Icon Icone {
+            get {
+                object obj = ResourceManager.GetObject("Icone", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login_de_usuario {
+            get {
+                object obj = ResourceManager.GetObject("login_de_usuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OIP {
+            get {
+                object obj = ResourceManager.GetObject("OIP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SAP_Business_One {
+            get {
+                object obj = ResourceManager.GetObject("SAP_Business_One", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a CREATE PROC SO_ExecutaAprovacao_proc
         ///@Pedido AS INT  
         ///,@Status AS NVARCHAR(1)  
         ///,@Usuario AS INT  
@@ -85,7 +135,7 @@ namespace CriadorTabelas.Resources {
         ///	   Update [@SOAPROVPED]   
         ///	   Set   
         ///		 U_Autorizado = &apos;TRUE&apos;,  
-        ///		 U_DataLib = Convert(date, getdate()),   [o restante da cadeia de caracteres foi truncado]&quot;;.
+        ///		 U_D [o restante da cadeia de caracteres foi truncado]&quot;;.
         /// </summary>
         internal static string SO_ExecutaAprovacao_proc {
             get {
@@ -94,7 +144,7 @@ namespace CriadorTabelas.Resources {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a        
+        ///   Consulta uma cadeia de caracteres localizada semelhante a CREATE PROC SO_Soluções       
         ///@object_type nvarchar(20),    -- SBO Object Type        
         ///@transaction_type nchar(1),   -- [A]dd, [U]pdate, [D]elete, [C]ancel, C[L]ose        
         ///@num_of_cols_in_key int,        
@@ -114,12 +164,21 @@ namespace CriadorTabelas.Resources {
         ///AS
         ///
         ///
-        ///--/* Aprovação de Pedido - Documento de Marketing */
-        ///IF @obj [o restante da cadeia de caracteres foi truncado]&quot;;.
+        ///--/* Aprovação de Pedido - Documento d [o restante da cadeia de caracteres foi truncado]&quot;;.
         /// </summary>
         internal static string SO_Soluções {
             get {
                 return ResourceManager.GetString("SO_Soluções", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trancar {
+            get {
+                object obj = ResourceManager.GetObject("trancar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

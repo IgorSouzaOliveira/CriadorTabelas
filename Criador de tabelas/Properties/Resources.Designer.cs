@@ -63,17 +63,6 @@ namespace CriadorTabelas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _2027488_vector_illustration_of_sign_in_page_login_website_page_and_form_people_with_smartphone_screen_vetor {
-            get {
-                object obj = ResourceManager.GetObject("2027488-vector-illustration-of-sign-in-page-login-website-page-and-form-people-wi" +
-                        "th-smartphone-screen-vetor", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap GifSAP {
             get {
                 object obj = ResourceManager.GetObject("GifSAP", resourceCulture);
@@ -94,29 +83,9 @@ namespace CriadorTabelas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap login_icon_176905 {
-            get {
-                object obj = ResourceManager.GetObject("login_icon_176905", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap OIP {
             get {
                 object obj = ResourceManager.GetObject("OIP", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap programming_web_development_ecommerce_shopping_management_order_icon_261609 {
-            get {
-                object obj = ResourceManager.GetObject("programming_web_development_ecommerce_shopping_management_order_icon_261609", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
