@@ -1,0 +1,9 @@
+﻿--Procedure do Add-on SoSoluções
+	EXEC [SO_Soluções]
+	@object_type = @object_type,
+	@transaction_type = @transaction_type,
+	@num_of_cols_in_key = @num_of_cols_in_key,
+	@list_of_key_cols_tab_del = @list_of_key_cols_tab_del,
+	@list_of_cols_val_tab_del = @list_of_cols_val_tab_del,
+	@error = @error output,        
+	@error_message = @error_message output

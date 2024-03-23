@@ -260,6 +260,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Arquivos\TransactionNotification_SOSoluções.txt" />
     <Content Include="Resources\Imagens\Icone.ico" />
     <Content Include="Resources\SQL\SO_ExecutaAprovacao_proc.sql" />
     <Content Include="Resources\SQL\SO_Soluções.sql" />

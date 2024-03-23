@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CriadorTabelas.exe" size="871920">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CriadorTabelas.exe" size="738800">
       <assemblyIdentity name="CriadorTabelas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>KRjKW/ZL2RGGSCbGzaz8b8WL3pOCSTNZjiIz6VaGHAY=</dsig:DigestValue>
+        <dsig:DigestValue>5Wdq4Qgv2vwXnF8VdtqOs01Z9fhM/krrCt0XF5Pw8OE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -556,6 +556,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>g9QqPSkzxtsk849i8aQiNUgyEDtAZWqqWehb+rOnGkA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Arquivos\TransactionNotification_SOSoluções.txt" size="366">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Nra5RpbxZkNwm330dlXnuaZ6a1Zy3+D7Yq91fJKYCFs=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\Imagens\Icone.ico" size="67646">

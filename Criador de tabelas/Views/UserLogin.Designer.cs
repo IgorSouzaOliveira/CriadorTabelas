@@ -166,9 +166,9 @@ namespace CriadorTabelas
             this.lblVersion.AutoSize = true;
             this.lblVersion.Location = new System.Drawing.Point(674, 543);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(67, 13);
+            this.lblVersion.Size = new System.Drawing.Size(73, 13);
             this.lblVersion.TabIndex = 53;
-            this.lblVersion.Text = "Versão 1.0.9";
+            this.lblVersion.Text = "Versão 1.0.10";
             // 
             // label1
             // 

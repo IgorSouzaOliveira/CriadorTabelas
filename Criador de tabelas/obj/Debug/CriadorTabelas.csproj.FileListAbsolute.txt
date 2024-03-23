@@ -183,7 +183,6 @@ C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Debug\CriadorTabelas.exe.
 C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Debug\CriadorTabelas.application
 C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Debug\CriadorTabelas.exe
 C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Debug\CriadorTabelas.pdb
-C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.AssemblyReference.cache
 C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Debug\Interop.SAPbobsCOM.dll
 C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Debug\Interop.SAPbouiCOM.dll
 C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.ResolveComReference.cache
@@ -271,3 +270,4 @@ C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Debug\Resources\Imagens\S
 C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Debug\Resources\Imagens\trancar.png
 C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Debug\Resources\Imagens\login-de-usuario.png
 C:\temp\projetos\CriadorTabelas\Criador de tabelas\bin\Debug\Resources\Imagens\OIP.jpg
+C:\temp\projetos\CriadorTabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.AssemblyReference.cache

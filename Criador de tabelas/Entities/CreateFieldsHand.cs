@@ -11,22 +11,23 @@ namespace CriadorTabelas.Classes
         UserFieldsMD oUserFieldsMD;
 
         private int lRetCode;
-        private string tablename { get; set; }private string name { get; set; }
-        private string description { get; set; }
-        private object type { get; set; }
-        private object subtype { get; set; }
-        private int size { get; set; }
+        private string Tablename { get; set; }
+        private string Name { get; set; }
+        private string Description { get; set; }
+        private object Type { get; set; }
+        private object Subtype { get; set; }
+        private int Size { get; set; }
 
-        ConnectionDB oConnectionDB = new ConnectionDB();
+        readonly ConnectionDB oConnectionDB = new ConnectionDB();
 
         public CreateFieldsHand(string tablename, string name, string description, BoFieldTypes type, BoFldSubTypes subtype, int size)
         {
-            this.tablename = tablename;
-            this.name = name;
-            this.description = description;
-            this.type = type;
-            this.size = size;
-            this.subtype = subtype;
+            Tablename = tablename;
+            Name = name;
+            Description = description;
+            Type = type;
+            Size = size;
+            Subtype = subtype;
             CreateFields();
         }
 
@@ -37,47 +38,47 @@ namespace CriadorTabelas.Classes
 
             try
             {
-                switch (type)
+                switch (Type)
                 {
                     case BoFieldTypes.db_Alpha:
 
-                        oUserFieldsMD.TableName = tablename;
-                        oUserFieldsMD.Name = name;
-                        oUserFieldsMD.Description = description;
-                        oUserFieldsMD.Type = (BoFieldTypes)type;
-                        oUserFieldsMD.Size = size;
+                        oUserFieldsMD.TableName = Tablename;
+                        oUserFieldsMD.Name = Name;
+                        oUserFieldsMD.Description = Description;
+                        oUserFieldsMD.Type = (BoFieldTypes)Type;
+                        oUserFieldsMD.Size = Size;
                         lRetCode = oUserFieldsMD.Add();
                         ExceptionError(lRetCode, oUserFieldsMD);
                         break;
 
                     case BoFieldTypes.db_Numeric:
 
-                        oUserFieldsMD.TableName = tablename;
-                        oUserFieldsMD.Name = name;
-                        oUserFieldsMD.Description = description;
-                        oUserFieldsMD.Type = (BoFieldTypes)type;
-                        oUserFieldsMD.EditSize = size;
+                        oUserFieldsMD.TableName = Tablename;
+                        oUserFieldsMD.Name = Name;
+                        oUserFieldsMD.Description = Description;
+                        oUserFieldsMD.Type = (BoFieldTypes)Type;
+                        oUserFieldsMD.EditSize = Size;
                         lRetCode = oUserFieldsMD.Add();
                         ExceptionError(lRetCode, oUserFieldsMD);
                         break;
 
                     case BoFieldTypes.db_Date:
-                        oUserFieldsMD.TableName = tablename;
-                        oUserFieldsMD.Name = name;
-                        oUserFieldsMD.Description = description;
-                        oUserFieldsMD.Type = (BoFieldTypes)type;
-                        oUserFieldsMD.SubType = (BoFldSubTypes)subtype;
+                        oUserFieldsMD.TableName = Tablename;
+                        oUserFieldsMD.Name = Name;
+                        oUserFieldsMD.Description = Description;
+                        oUserFieldsMD.Type = (BoFieldTypes)Type;
+                        oUserFieldsMD.SubType = (BoFldSubTypes)Subtype;
                         lRetCode = oUserFieldsMD.Add();
                         ExceptionError(lRetCode, oUserFieldsMD);
                         break;
 
                     case BoFieldTypes.db_Float:
 
-                        oUserFieldsMD.TableName = tablename;
-                        oUserFieldsMD.Name = name;
-                        oUserFieldsMD.Description = description;
-                        oUserFieldsMD.Type = (BoFieldTypes)type;
-                        oUserFieldsMD.SubType = (BoFldSubTypes)subtype;
+                        oUserFieldsMD.TableName = Tablename;
+                        oUserFieldsMD.Name = Name;
+                        oUserFieldsMD.Description = Description;
+                        oUserFieldsMD.Type = (BoFieldTypes)Type;
+                        oUserFieldsMD.SubType = (BoFldSubTypes)Subtype;
                         lRetCode = oUserFieldsMD.Add();
                         ExceptionError(lRetCode, oUserFieldsMD);
                         break;
@@ -88,7 +89,7 @@ namespace CriadorTabelas.Classes
                 oUserFieldsMD = null;
                 GC.Collect();
                 oConnectionDB.CloseConnection();
-                
+
             }
             catch (Exception ex)
             {
@@ -96,28 +97,27 @@ namespace CriadorTabelas.Classes
             }
         }
         private void ExceptionError(int lretcode, UserFieldsMD oUserFieldsMD)
-        {
-            LogCreate oLogCreate = new LogCreate();
+        {            
             int errorCode = lretcode;
-            string errorMsg;            
+            string errorMsg;
 
             switch (errorCode)
             {
                 case 0:
-                     oLogCreate.Log($"[Sucesso] - Campo: {oUserFieldsMD.Name} criado com sucesso na Tabela:{oUserFieldsMD.TableName}");
+                    MessageBox.Show($"[Sucesso] - Campo: {oUserFieldsMD.Name} criado com sucesso na Tabela:{oUserFieldsMD.TableName}");
                     break;
 
                 case -2035:
-                    oLogCreate.Log($"[Aviso] - Campo: {oUserFieldsMD.Name}, já existe na base de dados.");
+                    MessageBox.Show($"[Aviso] - Campo: {oUserFieldsMD.Name}, já existe na base de dados.");
                     break;
 
                 case -5002:
-                    oLogCreate.Log($"[Aviso] - Campo: {oUserFieldsMD.Name}, já existe na base de dados.");
+                    MessageBox.Show($"[Aviso] - Campo: {oUserFieldsMD.Name}, já existe na base de dados.");
                     break;
 
                 default:
                     oCompany.GetLastError(out errorCode, out errorMsg);
-                    oLogCreate.Log($"[Erro]: {errorCode}, Mensagem: {errorMsg}");
+                    MessageBox.Show($"[Erro]: {errorCode}, Mensagem: {errorMsg}");
                     break;
             }
 

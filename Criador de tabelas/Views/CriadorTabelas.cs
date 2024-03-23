@@ -15,9 +15,9 @@ namespace TesteCriadorTabelas
         public string sErrMsg;
         public long lErrCode;
         public long lRetCode;
-        CreateTable oCreateTable = new CreateTable();
-        CreateFields oCreateFields = new CreateFields();
-        CreateUDO oCreateUDO = new CreateUDO();
+        readonly CreateTable oCreateTable = new CreateTable();
+        readonly CreateFields oCreateFields = new CreateFields();
+        readonly CreateUDO oCreateUDO = new CreateUDO();
         public ExecuteQuerySQL oExecuteQuerySQL { get; private set; } = new ExecuteQuerySQL();
 
         public formCriadorTabelas()
