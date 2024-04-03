@@ -5,9 +5,8 @@ using System.Windows.Forms;
 
 namespace CriadorTabelas.Classes
 {
-    public class CreateFieldsHand
-    {
-        public Company oCompany = new Company();
+    class CreateFieldsHand : ConnectionDB
+    {        
         UserFieldsMD oUserFieldsMD;
 
         private int lRetCode;
@@ -18,7 +17,7 @@ namespace CriadorTabelas.Classes
         private object Subtype { get; set; }
         private int Size { get; set; }
 
-        readonly ConnectionDB oConnectionDB = new ConnectionDB();
+        
 
         public CreateFieldsHand(string tablename, string name, string description, BoFieldTypes type, BoFldSubTypes subtype, int size)
         {
@@ -33,8 +32,8 @@ namespace CriadorTabelas.Classes
 
         private void CreateFields()
         {
-            oConnectionDB.OpenConnection();
-            oUserFieldsMD = (UserFieldsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
+            OpenConnection();
+            oUserFieldsMD = (UserFieldsMD)oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
 
             try
             {
@@ -88,7 +87,7 @@ namespace CriadorTabelas.Classes
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(oUserFieldsMD);
                 oUserFieldsMD = null;
                 GC.Collect();
-                oConnectionDB.CloseConnection();
+                CloseConnection();
 
             }
             catch (Exception ex)

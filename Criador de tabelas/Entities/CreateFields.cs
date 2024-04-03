@@ -6,22 +6,22 @@ using SAPbobsCOM;
 
 namespace CriadorTabelas
 {
-    class CreateFields
-    {
-        private Company oCompany = new Company();
+    class CreateFields : ConnectionDB
+    {        
         
         private int lRetCode;
-        public ConnectionDB oConnectionDB { get; set; } = new ConnectionDB();
+        
         public void CreateFieldsSAP()
         {
-            oConnectionDB.OpenConnection();
+            OpenConnection();
+
             UserFieldsMD oUserFieldsMD = null;
-            oUserFieldsMD = (UserFieldsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
+            oUserFieldsMD = (UserFieldsMD)oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
 
             System.Runtime.InteropServices.Marshal.ReleaseComObject(oUserFieldsMD);
             oUserFieldsMD = null;
             GC.Collect();
-            oUserFieldsMD = (UserFieldsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
+            oUserFieldsMD = (UserFieldsMD)oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
 
             try
             {
@@ -49,7 +49,7 @@ namespace CriadorTabelas
 
                 ExceptionError(lRetCode, oUserFieldsMD);
 
-                oUserFieldsMD = (UserFieldsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
+                oUserFieldsMD = (UserFieldsMD)oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
                 oUserFieldsMD.TableName = "@SOAPROVPED";
                 oUserFieldsMD.Name = "Id";
                 oUserFieldsMD.Description = "Id";
@@ -70,7 +70,7 @@ namespace CriadorTabelas
 
                 ExceptionError(lRetCode, oUserFieldsMD);
 
-                oUserFieldsMD = (UserFieldsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
+                oUserFieldsMD = (UserFieldsMD)oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
                 oUserFieldsMD.TableName = "@SOAPROVPED";
                 oUserFieldsMD.Name = "QtdAprov";
                 oUserFieldsMD.Description = "Quantidade aprovada";
@@ -81,7 +81,7 @@ namespace CriadorTabelas
 
                 ExceptionError(lRetCode, oUserFieldsMD);
 
-                oUserFieldsMD = (UserFieldsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
+                oUserFieldsMD = (UserFieldsMD)oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
                 oUserFieldsMD.TableName = "@SOAPROVPED";
                 oUserFieldsMD.Name = "QtdReprov";
                 oUserFieldsMD.Description = "Quantidade Reprovada";
@@ -92,7 +92,7 @@ namespace CriadorTabelas
 
                 ExceptionError(lRetCode, oUserFieldsMD);
 
-                oUserFieldsMD = (UserFieldsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
+                oUserFieldsMD = (UserFieldsMD)oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
                 oUserFieldsMD.TableName = "@SOAPROVPED";
                 oUserFieldsMD.Name = "Autor";
                 oUserFieldsMD.Description = "Autor";
@@ -103,7 +103,7 @@ namespace CriadorTabelas
 
                 ExceptionError(lRetCode, oUserFieldsMD);
 
-                oUserFieldsMD = (UserFieldsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
+                oUserFieldsMD = (UserFieldsMD)oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
                 oUserFieldsMD.TableName = "@SOAPROVPED";
                 oUserFieldsMD.Name = "Aprovador";
                 oUserFieldsMD.Description = "Aprovador";
@@ -117,7 +117,7 @@ namespace CriadorTabelas
                 oUserFieldsMD.TableName = "@SOAPROVPED";
                 oUserFieldsMD.Name = "Querie";
                 oUserFieldsMD.Description = "Querie";
-                oUserFieldsMD.Type = SAPbobsCOM.BoFieldTypes.db_Alpha;
+                oUserFieldsMD.Type = BoFieldTypes.db_Alpha;
                 oUserFieldsMD.Size = 200;
 
                 lRetCode = oUserFieldsMD.Add();
@@ -163,7 +163,7 @@ namespace CriadorTabelas
 
                 ExceptionError(lRetCode, oUserFieldsMD);
 
-                oUserFieldsMD = (UserFieldsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
+                oUserFieldsMD = (UserFieldsMD)oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
                 oUserFieldsMD.TableName = "@SOAPROVPED";
                 oUserFieldsMD.Name = "DocType";
                 oUserFieldsMD.Description = "Tipo do documento";
@@ -174,7 +174,7 @@ namespace CriadorTabelas
 
                 ExceptionError(lRetCode, oUserFieldsMD);
 
-                oUserFieldsMD = (UserFieldsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
+                oUserFieldsMD = (UserFieldsMD)oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
                 oUserFieldsMD.TableName = "@SOAPROVPED";
                 oUserFieldsMD.Name = "Etapa";
                 oUserFieldsMD.Description = "Etapa aprovação";
@@ -185,7 +185,7 @@ namespace CriadorTabelas
 
                 ExceptionError(lRetCode, oUserFieldsMD);
 
-                oUserFieldsMD = (UserFieldsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
+                oUserFieldsMD = (UserFieldsMD)oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
                 oUserFieldsMD.TableName = "@SOAPROVPED";
                 oUserFieldsMD.Name = "Texto";
                 oUserFieldsMD.Description = "Texto";
@@ -196,7 +196,7 @@ namespace CriadorTabelas
 
                 ExceptionError(lRetCode, oUserFieldsMD);
 
-                oUserFieldsMD = (UserFieldsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
+                oUserFieldsMD = (UserFieldsMD)oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
                 oUserFieldsMD.TableName = "@SOAPROVPED";
                 oUserFieldsMD.Name = "OrdemEtapa";
                 oUserFieldsMD.Description = "Ordem etapa";
@@ -261,7 +261,7 @@ namespace CriadorTabelas
             System.Runtime.InteropServices.Marshal.ReleaseComObject(oUserFieldsMD);
             oUserFieldsMD = null;
             GC.Collect();            
-            oConnectionDB.CloseConnection();            
+            CloseConnection();            
         }
 
         private void ExceptionError(int lretcode, UserFieldsMD oUserFieldsMD)

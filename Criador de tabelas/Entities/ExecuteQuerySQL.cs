@@ -25,14 +25,9 @@ namespace CriadorTabelas.Entities
             }
             catch (SqlException error)
             {
-
                 MessageBox.Show(error.Message);
             }
-        }
-
-        public void CloseConnection()
-        {
-        }
+        }         
 
         public void CreateProc()
         {

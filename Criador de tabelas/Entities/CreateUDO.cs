@@ -7,26 +7,22 @@ using SAPbobsCOM;
 
 namespace CriadorTabelas
 {
-    class CreateUDO
+    class CreateUDO : ConnectionDB
     {
-       
-        public Company oCompany = new Company();
-        
         private int lRetCode;
-        public ConnectionDB oConnectionDB { get; set; } = new ConnectionDB();
 
         public void CreateUDOSAP()
         {
             try
             {
-                oConnectionDB.OpenConnection();
+                OpenConnection();
                 UserObjectsMD oUserObjectsMD = null;
-                oUserObjectsMD = (UserObjectsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserObjectsMD);
+                oUserObjectsMD = (UserObjectsMD)oCompany.GetBusinessObject(BoObjectTypes.oUserObjectsMD);
 
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(oUserObjectsMD);
                 oUserObjectsMD = null;
                 GC.Collect();
-                oUserObjectsMD = (UserObjectsMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserObjectsMD);
+                oUserObjectsMD = (UserObjectsMD)oCompany.GetBusinessObject(BoObjectTypes.oUserObjectsMD);
 
                 oUserObjectsMD.Code = "SOCONF";
                 oUserObjectsMD.Name = "SO: Configuração SO Solutions";
@@ -43,15 +39,15 @@ namespace CriadorTabelas
                 oUserObjectsMD.TableName = "MERCADDESC";
                 oUserObjectsMD.CanDelete = BoYesNoEnum.tNO;
                 oUserObjectsMD.CanLog = BoYesNoEnum.tYES;
-                lRetCode = oUserObjectsMD.Add();                              
+                lRetCode = oUserObjectsMD.Add();
 
                 ExceptionError(lRetCode, oUserObjectsMD);
 
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(oUserObjectsMD);
                 oUserObjectsMD = null;
                 GC.Collect();
-                oConnectionDB.CloseConnection();
-                
+                CloseConnection();
+
             }
             catch (Exception)
             {
@@ -63,7 +59,6 @@ namespace CriadorTabelas
         private void ExceptionError(int lretcode, UserObjectsMD oUserObjectsMD)
         {
             LogCreate oLogCreate = new LogCreate();
-                     
 
             int errorCode = lretcode;
             string errorMsg;

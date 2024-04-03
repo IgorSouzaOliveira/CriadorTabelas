@@ -6,23 +6,20 @@ using System.Windows.Forms;
 
 namespace CriadorTabelas
 {
-    class CreateTable
+    class CreateTable : ConnectionDB
     {
-        private Company oCompany = new Company();
-        
         private int lRetCode;
-        public ConnectionDB oConnectionDB { get; set; } = new ConnectionDB();
+
         public void CreateTableSAP()
         {
-
-            oConnectionDB.OpenConnection();
+            OpenConnection();
             UserTablesMD oUserTablesMD = null;
-            oUserTablesMD = (UserTablesMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserTables);
+            oUserTablesMD = (UserTablesMD)oCompany.GetBusinessObject(BoObjectTypes.oUserTables);
 
             System.Runtime.InteropServices.Marshal.ReleaseComObject(oUserTablesMD);
             oUserTablesMD = null;
             GC.Collect();
-            oUserTablesMD = (UserTablesMD)ConnectionDB.oCompany.GetBusinessObject(BoObjectTypes.oUserTables);
+            oUserTablesMD = (UserTablesMD)oCompany.GetBusinessObject(BoObjectTypes.oUserTables);
 
             /* Tabela de configuraçao do Add-on*/
 
@@ -59,8 +56,8 @@ namespace CriadorTabelas
             System.Runtime.InteropServices.Marshal.ReleaseComObject(oUserTablesMD);
             oUserTablesMD = null;
             GC.Collect();
-            oConnectionDB.CloseConnection();
-            
+            CloseConnection();
+
         }
         private void ExceptionError(int lretcode, UserTablesMD oUserTablesMD)
         {
