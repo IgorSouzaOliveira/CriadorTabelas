@@ -13,7 +13,7 @@ namespace CriadorTabelas.Entities
 
         const string path = @"C:\LogDeCriação.txt";
 
-        public void Log(string swLog)
+        public static void Log(string swLog)
         {
 
             try

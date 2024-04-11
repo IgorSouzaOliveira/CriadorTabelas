@@ -58,16 +58,16 @@ namespace CriadorTabelas.Entities
                     }
 
                 }
-                catch (SqlException error)
+                catch (SqlException)
                 {
-                    oLogCreate.Log($"[Erro] - {error.Message}.");
+                    //oLogCreate.Log($"[Erro] - {error.Message}.");
                 }
             }
 
-            foreach (string procedureName in createdProcedures)
-            {
-                oLogCreate.Log($"[Sucesso] - Procedure {procedureName} criada com suceso.");
-            }
+            //foreach (string procedureName in createdProcedures)
+            //{
+            //    oLogCreate.Log($"[Sucesso] - Procedure {procedureName} criada com suceso.");
+            //}
 
         }
 
