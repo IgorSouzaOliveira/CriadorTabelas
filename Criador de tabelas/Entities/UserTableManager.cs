@@ -18,6 +18,7 @@ namespace CriadorTabelas.Entities
                     oUserTablesMD.TableName = tableName;
                     oUserTablesMD.TableDescription = tableDescription;
                     oUserTablesMD.TableType = tableType;
+                    oUserTablesMD.DisplayMenu = BoYesNoEnum.tNO;
                     int lRet = oUserTablesMD.Add();
 
                     if (lRet != 0)

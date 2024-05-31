@@ -13,11 +13,11 @@ namespace CriadorTabelas.Entities
             try
             {
                 /* ATENÇÃO - Dados de conexão - HOMOLOGAÇÃO */
-                oCompany.SLDServer = "desktop-honu6ik:40000";
-                oCompany.Server = "DESKTOP-HONU6IK";
-                oCompany.CompanyDB = "SBODemoBR";
+                oCompany.SLDServer = "DESKTOP-FCO1FQC:40000";
+                oCompany.Server = "DESKTOP-FCO1FQC";
+                oCompany.CompanyDB = "SBOTESTE";
                 oCompany.UserName = "manager";
-                oCompany.Password = "manager";
+                oCompany.Password = "1234";
                 oCompany.language = BoSuppLangs.ln_Portuguese_Br;
                 oCompany.DbServerType = BoDataServerTypes.dst_MSSQL2019;
 

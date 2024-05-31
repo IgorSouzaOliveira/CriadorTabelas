@@ -275,35 +275,21 @@ namespace TesteCriadorTabelas
             progressBar.Value = 50;
 
             /* Criar Tabelas de Usuário */
-            UserTableManager.AddUserTable("SOCONF", "SO:Configuração SOSolutions", BoUTBTableType.bott_MasterData);
-            UserTableManager.AddUserTable("SOAPROVPED", "SO: Aprovação de pedido", BoUTBTableType.bott_NoObjectAutoIncrement);
-            UserTableManager.AddUserTable("MERCADDESC", "SO: Cadastro de desconto", BoUTBTableType.bott_MasterData);
-            UserTableManager.AddUserTable("MERLCADDESC", "SO: Cadastro de desconto linha", BoUTBTableType.bott_MasterDataLines);
+            UserTableManager.AddUserTable("BONECONFMAIN", "BOne: Configuração Add-on", BoUTBTableType.bott_NoObject);
+            UserTableManager.AddUserTable("BONMODAPROV", "BOne: Modelos de aprovação", BoUTBTableType.bott_NoObject);
 
             /* Criar Campos de Usuário */
-            UserTableManager.AddUserFields("SOCONF", "SO_UtilizaAprovacaoPed", "Utiliza Aprovação Ped", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 10, 0);
-            UserTableManager.AddUserFields("SOAPROVPED", "DocEntry", "Pedido", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 25, 0);
-            UserTableManager.AddUserFields("SOAPROVPED", "Id", "Id", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 10);
-            UserTableManager.AddUserFields("SOAPROVPED", "Modelo", "Modelo Aprovação", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 50, 0);
-            UserTableManager.AddUserFields("SOAPROVPED", "QtdAprov", "Quantidade aprovada", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 10);
-            UserTableManager.AddUserFields("SOAPROVPED", "QtdReprov", "Quantidade Reprovada", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 10);
-            UserTableManager.AddUserFields("SOAPROVPED", "Autor", "Autor", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 10);
-            UserTableManager.AddUserFields("SOAPROVPED", "Aprovador", "Aprovador", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 10);
-            UserTableManager.AddUserFields("SOAPROVPED", "Querie", "Querie", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 200, 0);
-            UserTableManager.AddUserFields("SOAPROVPED", "Resultado", "Resultado", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 10, 0);
-            UserTableManager.AddUserFields("SOAPROVPED", "Autorizado", "Flag", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
-            UserTableManager.AddUserFields("SOAPROVPED", "DataLib", "Data liberacao", BoFieldTypes.db_Date, BoFldSubTypes.st_None, 0, 0);
-            UserTableManager.AddUserFields("SOAPROVPED", "HoraLib", "Hora liberacao", BoFieldTypes.db_Date, BoFldSubTypes.st_Time, 0, 0);
-            UserTableManager.AddUserFields("SOAPROVPED", "DocType", "Tipo do documento", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
-            UserTableManager.AddUserFields("SOAPROVPED", "Etapa", "Etapa aprovação", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 200, 0);
-            UserTableManager.AddUserFields("SOAPROVPED", "Texto", "Texto", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 200, 0);
-            UserTableManager.AddUserFields("SOAPROVPED", "OrdemEtapa", "Ordem etapa", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 10);
-            UserTableManager.AddUserFields("SOAPROVPED", "StatusEtapa", "Status Etapa", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
-            UserTableManager.AddUserFields("MERLCADDESC", "Mr_CodRep", "Código do Representante", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
+            UserTableManager.AddUserFields("BONECONFMAIN", "BOne_AtivoAprov", "Utilizar Aprovação", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 1, 0);
+            UserTableManager.AddUserFields("BONMODAPROV", "BOne_ObjectType", "ObjectType", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None,20, 0);
+            UserTableManager.AddUserFields("BONMODAPROV", "BOne_NomeConsulta", "Nome Consulta", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
+            UserTableManager.AddUserFields("BONMODAPROV", "BOne_Query", "Query", BoFieldTypes.db_Memo, BoFldSubTypes.st_None, 0, 0);
+            UserTableManager.AddUserFields("BONMODAPROV", "BOne_CodeEtapa", "Codigo Etapa", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None,0, 20);
+            UserTableManager.AddUserFields("BONMODAPROV", "BOne_EtapaAut", "Etapa de autorização", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
+            UserTableManager.AddUserFields("BONMODAPROV", "BOne_Ativo", "Ativo", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 1, 0);
 
             /* Registrar Objeto */
-            UserTableManager.AddUDO("SOCONF", "SO: Configuração SO Solutions",BoUDOObjType.boud_MasterData, "SOCONF",BoYesNoEnum.tNO, BoYesNoEnum.tYES);
-            UserTableManager.AddUDO("MERCADDESC", "SO: Cadastro desconto", BoUDOObjType.boud_MasterData, "MERCADDESC", BoYesNoEnum.tNO, BoYesNoEnum.tYES);
+            //UserTableManager.AddUDO("SOCONF", "SO: Configuração SO Solutions",BoUDOObjType.boud_MasterData, "SOCONF",BoYesNoEnum.tNO, BoYesNoEnum.tYES);
+            
 
             oExecuteQuerySQL.CreateProc();
             progressBar.Value = 100;
