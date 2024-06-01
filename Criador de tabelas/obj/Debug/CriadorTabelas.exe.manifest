@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CriadorTabelas.exe" size="732656">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CriadorTabelas.exe" size="733168">
       <assemblyIdentity name="CriadorTabelas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FD+AVfT/CnXX9rueymc1srGTtcxtYCCv1K9ipGDKIko=</dsig:DigestValue>
+        <dsig:DigestValue>09vJ+bk9JK2FXhXghZ2rG8/xXcIl9JDVXMNU2yKn/Jo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -522,6 +522,15 @@
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="Config\Config.xml" size="214" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>BRg7bG0k6/2fqIwehJbE6OfILhtijBok8naRt6x4Odg=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="CriadorTabelas.exe.config" size="2828">
     <hash>
       <dsig:Transforms>

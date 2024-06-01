@@ -1,6 +1,8 @@
 ﻿using SAPbobsCOM;
 using System;
+using System.IO;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace CriadorTabelas.Entities
 {
@@ -12,23 +14,25 @@ namespace CriadorTabelas.Entities
         {
             try
             {
-                /* ATENÇÃO - Dados de conexão - HOMOLOGAÇÃO */
-                oCompany.SLDServer = "DESKTOP-FCO1FQC:40000";
-                oCompany.Server = "DESKTOP-FCO1FQC";
-                oCompany.CompanyDB = "SBOTESTE";
-                oCompany.UserName = "manager";
-                oCompany.Password = "1234";
-                oCompany.language = BoSuppLangs.ln_Portuguese_Br;
-                oCompany.DbServerType = BoDataServerTypes.dst_MSSQL2019;
 
-                /*Dados de conexão - PRODUÇÃO */
-                //oCompany.SLDServer = "desktop-honu6ik:40000";
-                //oCompany.Server = "DESKTOP-HONU6IK";
-                //oCompany.CompanyDB = "SBODemoBR";
-                //oCompany.UserName = "manager";
-                //oCompany.Password = "manager";
-                //oCompany.language = BoSuppLangs.ln_Portuguese_Br;
-                //oCompany.DbServerType = BoDataServerTypes.dst_MSSQL2019;
+                string directory = AppDomain.CurrentDomain.BaseDirectory;
+                string path = Path.Combine(directory, $"Config\\Config.xml");
+
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(path);
+
+                XmlNodeList xnList = xmlDoc.GetElementsByTagName("ConnectionData");
+
+                foreach (XmlNode xn in xnList)
+                {
+                    oCompany.SLDServer = xn["SLDServer"].InnerText;
+                    oCompany.Server = xn["Server"].InnerText;
+                    oCompany.CompanyDB = xn["CompanyDB"].InnerText;
+                    oCompany.UserName = xn["UserName"].InnerText;
+                    oCompany.Password = xn["Password"].InnerText;
+                    oCompany.language = BoSuppLangs.ln_Portuguese_Br;
+                    oCompany.DbServerType = BoDataServerTypes.dst_MSSQL2019;
+                }   
 
                 Int32 lRet = oCompany.Connect();
                 if (lRet != 0)

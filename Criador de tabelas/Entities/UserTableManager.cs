@@ -23,7 +23,7 @@ namespace CriadorTabelas.Entities
 
                     if (lRet != 0)
                     {
-                        LogCreate.Log(CommonBase.oCompany.GetLastErrorDescription());
+                        throw new Exception(CommonBase.oCompany.GetLastErrorDescription());                           
                     }
 
                     LogCreate.Log($"Tabela: @{oUserTablesMD.TableName}, criado com sucesso.");
@@ -31,7 +31,7 @@ namespace CriadorTabelas.Entities
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                LogCreate.Log($"Tabela: @{oUserTablesMD.TableName} - {ex.Message}");
             }
             finally
             {
@@ -42,7 +42,6 @@ namespace CriadorTabelas.Entities
             }
 
         }
-
         public static void AddUserFields(string tableName, string name, string description, BoFieldTypes boFieldTypes, BoFldSubTypes boFldSubTypes, int size, int editSize)
         {
             UserFieldsMD oUserFieldsMD = null;
@@ -50,28 +49,28 @@ namespace CriadorTabelas.Entities
             oUserFieldsMD = CommonBase.oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
 
             try
-            {
+            {                 
+
                 oUserFieldsMD.TableName = tableName;
                 oUserFieldsMD.Name = name;
                 oUserFieldsMD.Description = description;
                 oUserFieldsMD.Type = boFieldTypes;
                 oUserFieldsMD.SubType = boFldSubTypes;
-                oUserFieldsMD.Size = size;
-                              
+                oUserFieldsMD.Size = size;                              
 
                 int lRet = oUserFieldsMD.Add();
 
                 if (lRet != 0)
                 {
-                    LogCreate.Log(CommonBase.oCompany.GetLastErrorDescription());
+                    throw new Exception(CommonBase.oCompany.GetLastErrorDescription());
                 }
 
-                LogCreate.Log($"Campo: @{oUserFieldsMD.Name}, criado com sucesso.");
+                LogCreate.Log($"Campo: {oUserFieldsMD.Name}, criado com sucesso.");
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                LogCreate.Log($"Campo: {oUserFieldsMD.Name} - {ex.Message}");
             }
             finally
             {
@@ -81,7 +80,6 @@ namespace CriadorTabelas.Entities
                 }
             }
         }
-
         public static void AddUDO(string code, string name, BoUDOObjType boUDOObjType, string tableName, BoYesNoEnum boYesNoEnum, BoYesNoEnum boYesNoEnum1)
         {
             UserObjectsMD oUserObjectsMD = null;
@@ -101,15 +99,15 @@ namespace CriadorTabelas.Entities
 
                 if (lRet != 0)
                 {
-                    LogCreate.Log(CommonBase.oCompany.GetLastErrorDescription());
+                   throw new Exception(CommonBase.oCompany.GetLastErrorDescription());
                 }
 
-                LogCreate.Log($"Objeto: @{oUserObjectsMD.Name}, criado com sucesso.");
+                LogCreate.Log($"Objeto: {oUserObjectsMD.Name}, criado com sucesso.");
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                LogCreate.Log($"Objeto: @{oUserObjectsMD.Name} - {ex.Message}");
             }
             finally
             {

@@ -258,6 +258,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\Config.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Arquivos\TransactionNotification_SOSoluções.txt" />
     <Content Include="Resources\Imagens\Icone.ico" />
     <Content Include="Resources\SQL\SO_ExecutaAprovacao_proc.sql" />

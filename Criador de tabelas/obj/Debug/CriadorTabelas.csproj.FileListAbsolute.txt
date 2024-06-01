@@ -361,3 +361,4 @@ C:\Users\SAPB1DEV\Desktop\_source\CriadorTabelas\Criador de tabelas\obj\Debug\Cr
 C:\Users\SAPB1DEV\Desktop\_source\CriadorTabelas\Criador de tabelas\obj\Debug\CriadorTabelas.csproj.CopyComplete
 C:\Users\SAPB1DEV\Desktop\_source\CriadorTabelas\Criador de tabelas\obj\Debug\CriadorTabelas.exe
 C:\Users\SAPB1DEV\Desktop\_source\CriadorTabelas\Criador de tabelas\obj\Debug\CriadorTabelas.pdb
+C:\Users\SAPB1DEV\Desktop\_source\CriadorTabelas\Criador de tabelas\bin\Debug\Config\Config.xml
