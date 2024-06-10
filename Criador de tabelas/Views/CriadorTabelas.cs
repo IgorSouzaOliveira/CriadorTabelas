@@ -303,13 +303,15 @@ namespace TesteCriadorTabelas
             UserTableManager.AddUserFields("BONEAPROV", "BOnePaymentMethod", "PaymentMethod", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
             UserTableManager.AddUserFields("BONEAPROV", "BOneDocTotal", "DocTotal", BoFieldTypes.db_Float, BoFldSubTypes.st_Price, 0, 0);
             UserTableManager.AddUserFields("BONEAPROV", "BOneCodEtapa", "CodigoEtapa", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 15);
-            UserTableManager.AddUserFields("BONEAPROV", "BOneAutorizado", "Autorizado", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 10, 0);
 
-            
+            UserTableManager.AddUserFields("BONEAPROV", "BOneNameEtapa", "EtapaNome", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0);
+            UserTableManager.AddUserFields("BONEAPROV", "BOneModeloAut", "NomeModelo", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0);
+            UserTableManager.AddUserFields("BONEAPROV", "BOneQueryAut", "QueryAut", BoFieldTypes.db_Memo, BoFldSubTypes.st_None, 0, 0);
+
+            UserTableManager.AddUserFields("BONEAPROV", "BOneAutorizado", "Autorizado", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 10, 0);            
 
             /* Registrar Objeto */
             //UserTableManager.AddUDO("SOCONF", "SO: Configuração SO Solutions",BoUDOObjType.boud_MasterData, "SOCONF",BoYesNoEnum.tNO, BoYesNoEnum.tYES);
-
 
             oExecuteQuerySQL.CreateProc();
             progressBar.Value = 100;
