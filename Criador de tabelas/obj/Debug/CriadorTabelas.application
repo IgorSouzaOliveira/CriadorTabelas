@@ -7,14 +7,14 @@
     <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="CriadorTabelas.exe.manifest" size="34773">
+    <dependentAssembly dependencyType="install" codebase="CriadorTabelas.exe.manifest" size="34354">
       <assemblyIdentity name="CriadorTabelas.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zf1lid8O52je95U25IGt0jf+41ZgeuCqSCDTh4huwo8=</dsig:DigestValue>
+        <dsig:DigestValue>EvwYNnz69FIwY8b07qSnt/47yYPxt25z9UqI7m2QZHc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

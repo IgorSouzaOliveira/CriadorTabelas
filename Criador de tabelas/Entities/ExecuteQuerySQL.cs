@@ -19,7 +19,7 @@ namespace CriadorTabelas.Entities
             try
             {
                 SqlConnection cnn;
-                connectionString = @"Data Source=DESKTOP-HONU6IK;Initial Catalog=SBODemoBR;User ID=sa;Password=x1234";
+                connectionString = @"Data Source=DESKTOP-FCO1FQC;Initial Catalog=SBOTESTE;User ID=sa;Password=x1234";
                 cnn = new SqlConnection(connectionString);
 
             }
@@ -27,13 +27,13 @@ namespace CriadorTabelas.Entities
             {
                 MessageBox.Show(error.Message);
             }
-        }         
+        }
 
         public void CreateProc()
         {
             Connection();
 
-            string[] procedure = { Resources.Resource.SO_ExecutaAprovacao_proc, Resources.Resource.SO_Soluções };
+            string[] procedure = { Resources.Resource.BONE_ExecAprov };
             List<string> createdProcedures = new List<string>();
 
             foreach (string procedures in procedure)
@@ -58,16 +58,16 @@ namespace CriadorTabelas.Entities
                     }
 
                 }
-                catch (SqlException)
+                catch (SqlException ex)
                 {
-                    //oLogCreate.Log($"[Erro] - {error.Message}.");
+                    LogCreate.Log($"[Erro] - {ex.Message}.");
                 }
             }
 
-            //foreach (string procedureName in createdProcedures)
-            //{
-            //    oLogCreate.Log($"[Sucesso] - Procedure {procedureName} criada com suceso.");
-            //}
+            foreach (string procedureName in createdProcedures)
+            {
+                LogCreate.Log($"[Sucesso] - Procedure: {procedureName} criada com sucesso.");
+            }
 
         }
 

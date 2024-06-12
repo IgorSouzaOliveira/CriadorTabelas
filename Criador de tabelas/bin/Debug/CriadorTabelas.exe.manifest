@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CriadorTabelas.exe" size="734704">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CriadorTabelas.exe" size="735216">
       <assemblyIdentity name="CriadorTabelas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>d56xAzmfWDOT49+jl06df+vxynO7RtxLzM8zsodWQE4=</dsig:DigestValue>
+        <dsig:DigestValue>F8KCiBZH52P/GSwSkHlCVlRj81fGHKmO+bDhR2Ojqak=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -585,22 +585,13 @@
       <dsig:DigestValue>KwBW11feCU188xuNLXJqfKMrvX9Ti+p+MUI0q3KTBBc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\SQL\SO_ExecutaAprovacao_proc.sql" size="4064">
+  <file name="Resources\SQL\BONE_ExecAprov.sql" size="1136">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>CeFZ3yT/C/Jc8gaLQhFFfjwOFjMYGlr2vycZq6XZrrY=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Resources\SQL\SO_Soluções.sql" size="1344">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>cH5I+sJkB+Ut8eesXqmcVb2DtjeCVZC8nojGDqo5Ov8=</dsig:DigestValue>
+      <dsig:DigestValue>W41RfBogUpO2ryE2+BNkfdQ0xPKwK//rSBR430XFYkw=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

@@ -23,7 +23,7 @@ namespace CriadorTabelas.Entities
 
                     if (lRet != 0)
                     {
-                        throw new Exception(CommonBase.oCompany.GetLastErrorDescription());                           
+                        throw new Exception(CommonBase.oCompany.GetLastErrorDescription());
                     }
 
                     LogCreate.Log($"Tabela: @{oUserTablesMD.TableName}, criado com sucesso.");
@@ -49,14 +49,30 @@ namespace CriadorTabelas.Entities
             oUserFieldsMD = CommonBase.oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
 
             try
-            {                 
+            {
 
-                oUserFieldsMD.TableName = tableName;
-                oUserFieldsMD.Name = name;
-                oUserFieldsMD.Description = description;
-                oUserFieldsMD.Type = boFieldTypes;
-                oUserFieldsMD.SubType = boFldSubTypes;
-                oUserFieldsMD.Size = size;                              
+
+                switch (boFieldTypes)
+                {
+                    case BoFieldTypes.db_Numeric:
+                        oUserFieldsMD.TableName = tableName;
+                        oUserFieldsMD.Name = name;
+                        oUserFieldsMD.Description = description;
+                        oUserFieldsMD.Type = boFieldTypes;
+                        oUserFieldsMD.SubType = boFldSubTypes;
+                        oUserFieldsMD.EditSize = editSize;
+                        break;
+
+                    default:
+                        oUserFieldsMD.TableName = tableName;
+                        oUserFieldsMD.Name = name;
+                        oUserFieldsMD.Description = description;
+                        oUserFieldsMD.Type = boFieldTypes;
+                        oUserFieldsMD.SubType = boFldSubTypes;
+                        oUserFieldsMD.Size = size;
+                        break;
+                }
+
 
                 int lRet = oUserFieldsMD.Add();
 
@@ -93,13 +109,13 @@ namespace CriadorTabelas.Entities
                 oUserObjectsMD.ObjectType = boUDOObjType;
                 oUserObjectsMD.TableName = tableName;
                 oUserObjectsMD.CanDelete = boYesNoEnum;
-                oUserObjectsMD.CanLog = boYesNoEnum1;                
+                oUserObjectsMD.CanLog = boYesNoEnum1;
 
                 int lRet = oUserObjectsMD.Add();
 
                 if (lRet != 0)
                 {
-                   throw new Exception(CommonBase.oCompany.GetLastErrorDescription());
+                    throw new Exception(CommonBase.oCompany.GetLastErrorDescription());
                 }
 
                 LogCreate.Log($"Objeto: {oUserObjectsMD.Name}, criado com sucesso.");

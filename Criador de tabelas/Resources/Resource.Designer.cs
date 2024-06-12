@@ -61,6 +61,31 @@ namespace CriadorTabelas.Resources {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a CREATE PROC [dbo].[BONE_ExecAprov] @UserAprov int
+        ///
+        ///AS
+        ///
+        ///SELECT 
+        ///		&apos;&apos; [Sel],
+        ///		CASE WHEN U_BOneTipoDoc = &apos;17&apos; THEN &apos;Pedido de venda&apos; 
+        ///		WHEN U_BOneTipoDoc = &apos;22&apos; THEN &apos;Pedido de compra&apos;
+        ///		WHEN U_BOneTipoDoc = &apos;540000006&apos; THEN &apos;Oferta de compra&apos;
+        ///		END AS [TipoDoc], 
+        ///		T0.U_BOneNumDoc [DocEntry], 
+        ///		T0.U_BOneCardCode [CardCode],
+        ///		T0.U_BOneCardName [CardName],
+        ///		T0.U_BOneBplID [BplId], 
+        ///		T0.U_BOneBplName [BplName],
+        ///		(SELECT A.SlpName FROM OSLP A WHERE A.SlpCode = T0.U_BOneSlpCode) [SlpName],
+        ///	 [o restante da cadeia de caracteres foi truncado]&quot;;.
+        /// </summary>
+        internal static string BONE_ExecAprov {
+            get {
+                return ResourceManager.GetString("BONE_ExecAprov", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap GifSAP {
@@ -107,68 +132,6 @@ namespace CriadorTabelas.Resources {
             get {
                 object obj = ResourceManager.GetObject("SAP_Business_One", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a CREATE PROC SO_ExecutaAprovacao_proc
-        ///@Pedido AS INT  
-        ///,@Status AS NVARCHAR(1)  
-        ///,@Usuario AS INT  
-        ///,@Modelo AS NVARCHAR(254)
-        ///,@DocType AS INT
-        ///,@Etapa AS NVARCHAR(254)
-        ///,@Texto As NVARCHAR(MAX) = NULL
-        ///,@UserCode As NVARCHAR(MAX) = NULL
-        ///											
-        ///As  
-        ///Begin  
-        ///
-        ///	IF (@UserCode IS NOT NULL)
-        ///	BEGIN
-        ///		SET @Usuario = (SELECT &quot;USERID&quot; FROM OUSR WHERE &quot;USER_CODE&quot; = @UserCode)
-        ///	END
-        ///  
-        /// If (@Status = &apos;A&apos;)  
-        ///    Begin  
-        ///  
-        ///	   Update [@SOAPROVPED]   
-        ///	   Set   
-        ///		 U_Autorizado = &apos;TRUE&apos;,  
-        ///		 U_D [o restante da cadeia de caracteres foi truncado]&quot;;.
-        /// </summary>
-        internal static string SO_ExecutaAprovacao_proc {
-            get {
-                return ResourceManager.GetString("SO_ExecutaAprovacao_proc", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a CREATE PROC SO_Soluções       
-        ///@object_type nvarchar(20),    -- SBO Object Type        
-        ///@transaction_type nchar(1),   -- [A]dd, [U]pdate, [D]elete, [C]ancel, C[L]ose        
-        ///@num_of_cols_in_key int,        
-        ///@list_of_key_cols_tab_del nvarchar(255),        
-        ///@list_of_cols_val_tab_del nvarchar(255),        
-        ///@error int output,        
-        ///@error_message nvarchar (200) output
-        ///
-        ///  
-        ///
-        ///
-        ////*
-        ///	Procedure utilizada no Add-on SO Solutions
-        ///	Autor: Igor Oliveira	
-        ///*/
-        ///
-        ///AS
-        ///
-        ///
-        ///--/* Aprovação de Pedido - Documento d [o restante da cadeia de caracteres foi truncado]&quot;;.
-        /// </summary>
-        internal static string SO_Soluções {
-            get {
-                return ResourceManager.GetString("SO_Soluções", resourceCulture);
             }
         }
         

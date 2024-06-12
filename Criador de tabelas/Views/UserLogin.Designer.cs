@@ -51,6 +51,7 @@ namespace CriadorTabelas
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Location = new System.Drawing.Point(252, 365);
             this.panel2.Name = "panel2";
@@ -59,6 +60,7 @@ namespace CriadorTabelas
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Black;
@@ -72,6 +74,7 @@ namespace CriadorTabelas
             // 
             // txtUserName
             // 
+            this.txtUserName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUserName.BackColor = System.Drawing.Color.White;
             this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -82,6 +85,7 @@ namespace CriadorTabelas
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Black;
@@ -95,6 +99,7 @@ namespace CriadorTabelas
             // 
             // txtPasswords
             // 
+            this.txtPasswords.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtPasswords.BackColor = System.Drawing.Color.White;
             this.txtPasswords.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPasswords.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,6 +111,9 @@ namespace CriadorTabelas
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(252, 291);
             this.panel1.Name = "panel1";
@@ -114,6 +122,7 @@ namespace CriadorTabelas
             // 
             // lblLogin
             // 
+            this.lblLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblLogin.AutoSize = true;
             this.lblLogin.Location = new System.Drawing.Point(302, 369);
             this.lblLogin.Name = "lblLogin";
@@ -123,6 +132,7 @@ namespace CriadorTabelas
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pictureBox5.Image = global::CriadorTabelas.Properties.Resources.GifSAP;
             this.pictureBox5.Location = new System.Drawing.Point(243, 119);
             this.pictureBox5.Name = "pictureBox5";
@@ -133,6 +143,7 @@ namespace CriadorTabelas
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox4.Image = global::CriadorTabelas.Properties.Resources.SAP_Business_One;
             this.pictureBox4.Location = new System.Drawing.Point(1, 431);
             this.pictureBox4.Name = "pictureBox4";
@@ -143,6 +154,7 @@ namespace CriadorTabelas
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pictureBox3.Image = global::CriadorTabelas.Properties.Resources.trancar;
             this.pictureBox3.Location = new System.Drawing.Point(252, 331);
             this.pictureBox3.Name = "pictureBox3";
@@ -153,6 +165,7 @@ namespace CriadorTabelas
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pictureBox2.Image = global::CriadorTabelas.Properties.Resources.login_de_usuario;
             this.pictureBox2.Location = new System.Drawing.Point(252, 257);
             this.pictureBox2.Name = "pictureBox2";
@@ -163,6 +176,7 @@ namespace CriadorTabelas
             // 
             // lblVersion
             // 
+            this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVersion.AutoSize = true;
             this.lblVersion.Location = new System.Drawing.Point(674, 543);
             this.lblVersion.Name = "lblVersion";
@@ -172,6 +186,7 @@ namespace CriadorTabelas
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(302, 543);
             this.label1.Name = "label1";
@@ -199,8 +214,8 @@ namespace CriadorTabelas
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "UserLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acesso";

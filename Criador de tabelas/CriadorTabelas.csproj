@@ -263,8 +263,7 @@
     </Content>
     <Content Include="Resources\Arquivos\TransactionNotification_SOSoluções.txt" />
     <Content Include="Resources\Imagens\Icone.ico" />
-    <Content Include="Resources\SQL\SO_ExecutaAprovacao_proc.sql" />
-    <Content Include="Resources\SQL\SO_Soluções.sql" />
+    <Content Include="Resources\SQL\BONE_ExecAprov.sql" />
     <None Include="Resources\Imagens\GifSAP.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
