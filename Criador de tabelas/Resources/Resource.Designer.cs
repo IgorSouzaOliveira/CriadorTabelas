@@ -61,23 +61,7 @@ namespace CriadorTabelas.Resources {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a CREATE PROC [dbo].[BONE_ExecAprov] @UserAprov int
-        ///
-        ///AS
-        ///
-        ///SELECT 
-        ///		&apos;&apos; [Sel],
-        ///		CASE WHEN U_BOneTipoDoc = &apos;17&apos; THEN &apos;Pedido de venda&apos; 
-        ///		WHEN U_BOneTipoDoc = &apos;22&apos; THEN &apos;Pedido de compra&apos;
-        ///		WHEN U_BOneTipoDoc = &apos;540000006&apos; THEN &apos;Oferta de compra&apos;
-        ///		END AS [TipoDoc], 
-        ///		T0.U_BOneNumDoc [DocEntry], 
-        ///		T0.U_BOneCardCode [CardCode],
-        ///		T0.U_BOneCardName [CardName],
-        ///		T0.U_BOneBplID [BplId], 
-        ///		T0.U_BOneBplName [BplName],
-        ///		(SELECT A.SlpName FROM OSLP A WHERE A.SlpCode = T0.U_BOneSlpCode) [SlpName],
-        ///	 [o restante da cadeia de caracteres foi truncado]&quot;;.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a .
         /// </summary>
         internal static string BONE_ExecAprov {
             get {

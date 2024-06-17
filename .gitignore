@@ -87,7 +87,6 @@ csx/
 AppPackages/
 
 # Others
-sql/
 *.Cache
 ClientBin/
 [Ss]tyle[Cc]op.*
@@ -109,9 +108,6 @@ Backup*/
 UpgradeLog*.XML
 UpgradeLog*.htm
 
-# SQL Server files
-App_Data/*.mdf
-App_Data/*.ldf
 
 # =========================
 # Windows detritus

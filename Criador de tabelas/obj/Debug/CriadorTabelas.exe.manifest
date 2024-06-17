@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>F8KCiBZH52P/GSwSkHlCVlRj81fGHKmO+bDhR2Ojqak=</dsig:DigestValue>
+        <dsig:DigestValue>RPG7AsZeghflQeXzul1sF4wNWXu7I++agKs71NW2Y5E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -528,7 +528,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>BRg7bG0k6/2fqIwehJbE6OfILhtijBok8naRt6x4Odg=</dsig:DigestValue>
+      <dsig:DigestValue>82CLbShgv6ANbRDW9+woZjuSsj0BWveWN0mOnNomTuY=</dsig:DigestValue>
     </hash>
   </file>
   <file name="CriadorTabelas.exe.config" size="2828">
@@ -585,13 +585,13 @@
       <dsig:DigestValue>KwBW11feCU188xuNLXJqfKMrvX9Ti+p+MUI0q3KTBBc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\SQL\BONE_ExecAprov.sql" size="1136">
+  <file name="Resources\SQL\BONE_ExecAprov.sql" size="1088">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>W41RfBogUpO2ryE2+BNkfdQ0xPKwK//rSBR430XFYkw=</dsig:DigestValue>
+      <dsig:DigestValue>vbNygOxljlndDOxwKQD6IZf46YSNmo2kpP+0RFgjG0c=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

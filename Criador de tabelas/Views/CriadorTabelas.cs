@@ -291,6 +291,7 @@ namespace TesteCriadorTabelas
             UserTableManager.AddUserFields("BONMODAPROV", "BOne_Ativo", "Ativo", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 1, 0);
 
             /* Tabela: BONEAPROV */
+            UserTableManager.AddUserFields("BONEAPROV", "BOneDocDate", "DocDate", BoFieldTypes.db_Date, BoFldSubTypes.st_None, 0, 0);
             UserTableManager.AddUserFields("BONEAPROV", "BOneTipoDoc", "TipoDoc", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
             UserTableManager.AddUserFields("BONEAPROV", "BOneNumDoc", "NumDoc", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
             UserTableManager.AddUserFields("BONEAPROV", "BOneCardCode", "CardCode", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
