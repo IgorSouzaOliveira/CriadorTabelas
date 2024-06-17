@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace CriadorTabelas.Entities
 {
@@ -16,10 +19,32 @@ namespace CriadorTabelas.Entities
 
         public void Connection()
         {
+            SqlConnection cnn;
+
             try
             {
-                SqlConnection cnn;
-                connectionString = @"Data Source=DESKTOP-FCO1FQC;Initial Catalog=SBOTESTE;User ID=sa;Password=x1234";
+                string directory = AppDomain.CurrentDomain.BaseDirectory;
+                string path = Path.Combine(directory, $"Config\\Config.xml");
+
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(path);
+
+                XmlNodeList xnList = xmlDoc.GetElementsByTagName("ConnectionData");
+
+                foreach (XmlNode xn in xnList)
+                {
+                    var dataSource = xn["ServerDB"].InnerText;
+                    var dataBase = xn["CompanyDB"].InnerText;
+                    var userDB = xn["UserDB"].InnerText;
+                    var passwordDB = xn["PasswordDB"].InnerText;
+
+                    connectionString = $@"Data Source={dataSource};Initial Catalog={dataBase};User ID={userDB};Password={passwordDB}";
+
+                }
+
+
+                
+                
                 cnn = new SqlConnection(connectionString);
 
             }

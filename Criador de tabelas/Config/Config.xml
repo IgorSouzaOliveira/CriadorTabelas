@@ -3,5 +3,8 @@
 	<Server>DESKTOP-MUO39UR</Server>
 	<CompanyDB>SBOTESTE</CompanyDB>
 	<UserName>manager</UserName>
-	<Password>1234</Password>	
+	<Password>1234</Password>
+	<ServerDB>DESKTOP-MUO39UR</ServerDB>
+	<UserDB>sa</UserDB>
+	<PasswordDB>1234</PasswordDB>
 </ConnectionData>
