@@ -5,6 +5,7 @@ using CriadorTabelas;
 using CriadorTabelas.Classes;
 using CriadorTabelas.Entities;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace TesteCriadorTabelas
 {
@@ -260,66 +261,77 @@ namespace TesteCriadorTabelas
         {
             linkLog.LinkVisited = true;
             System.Diagnostics.Process.Start(@"C:\LogDeCriação.txt");
+        }       
+
+       
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
-        private void btnExec_Click(object sender, EventArgs e)
+        private async void btnExec_Click(object sender, EventArgs e)
         {
             CommonBase.OpenConnection();
-
 
             const string path = @"C:\LogDeCriação.txt";
             File.Delete(path);
 
             lblReturn.Text = "Processo em andamento. Aguarde...";
             lblReturn.Refresh();
-            progressBar.Value = 50;
+
+            progressBar.Minimum = 0;
+            progressBar.Maximum = 28; // Número total de métodos
+            progressBar.Value = 0;
 
             /* Criar Tabelas de Usuário */
-            UserTableManager.AddUserTable("BONECONFMAIN", "BOne: Configuração Add-on", BoUTBTableType.bott_NoObject);
-            UserTableManager.AddUserTable("BONMODAPROV", "BOne: Modelos de aprovação", BoUTBTableType.bott_NoObject);
-            UserTableManager.AddUserTable("BONEAPROV", "BOne: Tabela de aprovação", BoUTBTableType.bott_NoObjectAutoIncrement);
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserTable("BONECONFMAIN", "BOne: Configuração Add-on", BoUTBTableType.bott_NoObject));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserTable("BONMODAPROV", "BOne: Modelos de aprovação", BoUTBTableType.bott_NoObject));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserTable("BONEAPROV", "BOne: Tabela de aprovação", BoUTBTableType.bott_NoObjectAutoIncrement));
 
             /* Tabela: BONECONFMAIN */
-            UserTableManager.AddUserFields("BONECONFMAIN", "BOne_AtivoAprov", "Utilizar Aprovação", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 1, 0);
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONECONFMAIN", "BOne_AtivoAprov", "Utilizar Aprovação", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 1, 0));
 
             /* Tabela: BONMODAPROV */
-            UserTableManager.AddUserFields("BONMODAPROV", "BOne_ObjectType", "ObjectType", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None,20, 0);
-            UserTableManager.AddUserFields("BONMODAPROV", "BOne_NomeConsulta", "Nome Consulta", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 100, 0);
-            UserTableManager.AddUserFields("BONMODAPROV", "BOne_Query", "Query", BoFieldTypes.db_Memo, BoFldSubTypes.st_None, 0, 0);
-            UserTableManager.AddUserFields("BONMODAPROV", "BOne_CodeEtapa", "Codigo Etapa", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None,0, 11);
-            UserTableManager.AddUserFields("BONMODAPROV", "BOne_EtapaAut", "Etapa de autorização", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
-            UserTableManager.AddUserFields("BONMODAPROV", "BOne_Ativo", "Ativo", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 1, 0);
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONMODAPROV", "BOne_ObjectType", "ObjectType", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONMODAPROV", "BOne_NomeConsulta", "Nome Consulta", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 100, 0));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONMODAPROV", "BOne_Query", "Query", BoFieldTypes.db_Memo, BoFldSubTypes.st_None, 0, 0));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONMODAPROV", "BOne_CodeEtapa", "Codigo Etapa", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONMODAPROV", "BOne_EtapaAut", "Etapa de autorização", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONMODAPROV", "BOne_Ativo", "Ativo", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 1, 0));
 
             /* Tabela: BONEAPROV */
-            UserTableManager.AddUserFields("BONEAPROV", "BOneDocDate", "DocDate", BoFieldTypes.db_Date, BoFldSubTypes.st_None, 0, 0);
-            UserTableManager.AddUserFields("BONEAPROV", "BOneTipoDoc", "TipoDoc", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
-            UserTableManager.AddUserFields("BONEAPROV", "BOneNumDoc", "NumDoc", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
-            UserTableManager.AddUserFields("BONEAPROV", "BOneCardCode", "CardCode", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
-            UserTableManager.AddUserFields("BONEAPROV", "BOneCardName", "CardName", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 150, 0);
-            UserTableManager.AddUserFields("BONEAPROV", "BOneBplID", "BplID", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
-            UserTableManager.AddUserFields("BONEAPROV", "BOneBplName", "BplName", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 150, 0);
-            UserTableManager.AddUserFields("BONEAPROV", "BOneSlpCode", "SlpCode", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
-            UserTableManager.AddUserFields("BONEAPROV", "BOneUserSign", "UserSign", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
-            UserTableManager.AddUserFields("BONEAPROV", "BOnePaymentCode", "PaymentCode", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
-            UserTableManager.AddUserFields("BONEAPROV", "BOnePaymentMethod", "PaymentMethod", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
-            UserTableManager.AddUserFields("BONEAPROV", "BOneDocTotal", "DocTotal", BoFieldTypes.db_Float, BoFldSubTypes.st_Price, 0, 0);
-            UserTableManager.AddUserFields("BONEAPROV", "BOneCodEtapa", "CodigoEtapa", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
-            UserTableManager.AddUserFields("BONEAPROV", "BOneNameEtapa", "EtapaNome", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0);
-            UserTableManager.AddUserFields("BONEAPROV", "BOneModeloAut", "NomeModelo", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0);
-            UserTableManager.AddUserFields("BONEAPROV", "BOneQueryAut", "QueryAut", BoFieldTypes.db_Memo, BoFldSubTypes.st_None, 0, 0);
-            UserTableManager.AddUserFields("BONEAPROV", "BOneAutorizado", "Autorizado", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 10, 0);
-            UserTableManager.AddUserFields("BONEAPROV", "BOneProcessado", "Processado", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None,0,1);
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneDocDate", "DocDate", BoFieldTypes.db_Date, BoFldSubTypes.st_None, 0, 0));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneTipoDoc", "TipoDoc", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneNumDoc", "NumDoc", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneCardCode", "CardCode", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneCardName", "CardName", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 150, 0));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneBplID", "BplID", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneBplName", "BplName", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 150, 0));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneSlpCode", "SlpCode", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneUserSign", "UserSign", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOnePaymentCode", "PaymentCode", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOnePaymentMethod", "PaymentMethod", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneDocTotal", "DocTotal", BoFieldTypes.db_Float, BoFldSubTypes.st_Price, 0, 0));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneCodEtapa", "CodigoEtapa", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneNameEtapa", "EtapaNome", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneModeloAut", "NomeModelo", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneQueryAut", "QueryAut", BoFieldTypes.db_Memo, BoFldSubTypes.st_None, 0, 0));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneAutorizado", "Autorizado", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 10, 0));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneProcessado", "Processado", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 1));
+            
             /* Registrar Objeto */
             //UserTableManager.AddUDO("SOCONF", "SO: Configuração SO Solutions",BoUDOObjType.boud_MasterData, "SOCONF",BoYesNoEnum.tNO, BoYesNoEnum.tYES);
 
             oExecuteQuerySQL.CreateProc();
-            progressBar.Value = 100;
             lblReturn.Text = "Processo Finalizado.";
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private async Task ExecuteMethodWithProgress(Action method)
         {
-            Application.Exit();
+            method();
+            progressBar.Value += 1;
+            await Task.Delay(500);
         }
     }
 

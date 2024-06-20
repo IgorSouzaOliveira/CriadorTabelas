@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CriadorTabelas.exe" size="735216">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CriadorTabelas.exe" size="742896">
       <assemblyIdentity name="CriadorTabelas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2y8iuU/B6bewtwTtygbmateVw2cXTPCo/oDzQjFJVYg=</dsig:DigestValue>
+        <dsig:DigestValue>K3x6iMeWdbLQ9F2W45rDFKEpbEvgLMpuyQ95VrUGXwE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -585,13 +585,13 @@
       <dsig:DigestValue>KwBW11feCU188xuNLXJqfKMrvX9Ti+p+MUI0q3KTBBc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\SQL\BONE_ExecAprov.sql" size="1107">
+  <file name="Resources\SQL\BONE_ExecAprov.sql" size="1138">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>003eC4VOjDVRhqkF5qomTuOOqT274BuKORfu5n9g7qw=</dsig:DigestValue>
+      <dsig:DigestValue>Kx1QtC9Mfy8/6Ww7cslu9qSFYCd7vh30Ow1E0Jyoqho=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

@@ -9,6 +9,7 @@ AS
 
 SELECT 
 		'' as 'Sel',
+		T0.U_BOneDocDate [DocDate],
 		CASE WHEN T0.U_BOneTipoDoc = '17' THEN 'Pedido de venda'
 		WHEN T0.U_BOneTipoDoc = '540000006' THEN 'Oferta de compra'
 		WHEN T0.U_BOneTipoDoc = '22' THEN 'Pedido de compra' END AS [TipoDoc],
