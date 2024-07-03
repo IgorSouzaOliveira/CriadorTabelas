@@ -39,7 +39,6 @@ namespace TesteCriadorTabelas
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPag2 = new System.Windows.Forms.TabPage();
             this.btnExit = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblReturn = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
             this.btnExec = new System.Windows.Forms.Button();
@@ -73,7 +72,6 @@ namespace TesteCriadorTabelas
             this.DateNow = new System.Windows.Forms.DateTimePicker();
             this.tabControl.SuspendLayout();
             this.tabPag2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridView)).BeginInit();
@@ -93,7 +91,6 @@ namespace TesteCriadorTabelas
             // tabPag2
             // 
             this.tabPag2.Controls.Add(this.btnExit);
-            this.tabPag2.Controls.Add(this.pictureBox3);
             this.tabPag2.Controls.Add(this.lblReturn);
             this.tabPag2.Controls.Add(this.lblStatus);
             this.tabPag2.Controls.Add(this.btnExec);
@@ -110,7 +107,7 @@ namespace TesteCriadorTabelas
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(89, 379);
+            this.btnExit.Location = new System.Drawing.Point(84, 276);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 68;
@@ -118,22 +115,13 @@ namespace TesteCriadorTabelas
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(117, 88);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(501, 181);
-            this.pictureBox3.TabIndex = 67;
-            this.pictureBox3.TabStop = false;
-            // 
             // lblReturn
             // 
             this.lblReturn.AccessibleDescription = "";
             this.lblReturn.AutoSize = true;
             this.lblReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReturn.ForeColor = System.Drawing.Color.Blue;
-            this.lblReturn.Location = new System.Drawing.Point(50, 329);
+            this.lblReturn.Location = new System.Drawing.Point(45, 226);
             this.lblReturn.Name = "lblReturn";
             this.lblReturn.Size = new System.Drawing.Size(0, 15);
             this.lblReturn.TabIndex = 66;
@@ -143,7 +131,7 @@ namespace TesteCriadorTabelas
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.Color.Blue;
-            this.lblStatus.Location = new System.Drawing.Point(11, 329);
+            this.lblStatus.Location = new System.Drawing.Point(6, 226);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(44, 15);
             this.lblStatus.TabIndex = 65;
@@ -151,7 +139,7 @@ namespace TesteCriadorTabelas
             // 
             // btnExec
             // 
-            this.btnExec.Location = new System.Drawing.Point(8, 379);
+            this.btnExec.Location = new System.Drawing.Point(3, 276);
             this.btnExec.Name = "btnExec";
             this.btnExec.Size = new System.Drawing.Size(75, 23);
             this.btnExec.TabIndex = 64;
@@ -161,7 +149,7 @@ namespace TesteCriadorTabelas
             // 
             // progressBar
             // 
-            this.progressBar.Location = new System.Drawing.Point(8, 347);
+            this.progressBar.Location = new System.Drawing.Point(3, 244);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(731, 23);
             this.progressBar.TabIndex = 63;
@@ -171,7 +159,7 @@ namespace TesteCriadorTabelas
             this.linkLog.AutoSize = true;
             this.linkLog.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLog.Location = new System.Drawing.Point(670, 379);
+            this.linkLog.Location = new System.Drawing.Point(665, 276);
             this.linkLog.Name = "linkLog";
             this.linkLog.Size = new System.Drawing.Size(67, 16);
             this.linkLog.TabIndex = 62;
@@ -464,7 +452,6 @@ namespace TesteCriadorTabelas
             this.tabControl.ResumeLayout(false);
             this.tabPag2.ResumeLayout(false);
             this.tabPag2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tb.ResumeLayout(false);
             this.tb.PerformLayout();
@@ -507,7 +494,6 @@ namespace TesteCriadorTabelas
         private Button btnExec;
         private Label lblStatus;
         private Label lblReturn;
-        private PictureBox pictureBox3;
         private Button btnExit;
         private DateTimePicker DateNow;
     }

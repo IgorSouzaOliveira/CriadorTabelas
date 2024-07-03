@@ -1,10 +1,10 @@
 ﻿<ConnectionData>
-	<SLDServer>DESKTOP-MUO39UR:40000</SLDServer>
-	<Server>DESKTOP-MUO39UR</Server>
+	<SLDServer>srv-sap-hmlg01:40000</SLDServer>
+	<Server>srv-sap-hmlg01</Server>
 	<CompanyDB>SBOTESTE</CompanyDB>
-	<UserName>manager</UserName>
-	<Password>1234</Password>
-	<ServerDB>DESKTOP-MUO39UR</ServerDB>
-	<UserDB>sa</UserDB>
-	<PasswordDB>1234</PasswordDB>
+	<UserName>igor.oliveira</UserName>
+	<Password>3060</Password>
+	<ServerDB>srv-sap-hmlg01</ServerDB>
+	<UserDB>sbolago</UserDB>
+	<PasswordDB>sbolago</PasswordDB>
 </ConnectionData>
