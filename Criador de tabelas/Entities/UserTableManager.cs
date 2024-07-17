@@ -64,12 +64,34 @@ namespace CriadorTabelas.Entities
                         break;
 
                     default:
-                        oUserFieldsMD.TableName = tableName;
-                        oUserFieldsMD.Name = name;
-                        oUserFieldsMD.Description = description;
-                        oUserFieldsMD.Type = boFieldTypes;
-                        oUserFieldsMD.SubType = boFldSubTypes;
-                        oUserFieldsMD.Size = size;
+                        switch (tableName)
+                        {
+                            case "OUSG":
+                                oUserFieldsMD.TableName = tableName;
+                                oUserFieldsMD.Name = name;
+                                oUserFieldsMD.Description = description;
+                                oUserFieldsMD.Type = boFieldTypes;
+                                oUserFieldsMD.SubType = boFldSubTypes;
+                                oUserFieldsMD.Size = size;
+                                oUserFieldsMD.ValidValues.Add();
+                                oUserFieldsMD.ValidValues.SetCurrentLine(0);
+                                oUserFieldsMD.ValidValues.Value = "S";
+                                oUserFieldsMD.ValidValues.Description = "Sim";
+                                oUserFieldsMD.ValidValues.Add();
+                                oUserFieldsMD.ValidValues.SetCurrentLine(1);
+                                oUserFieldsMD.ValidValues.Value = "N";
+                                oUserFieldsMD.ValidValues.Description = "Não";
+                                break;
+
+                            default:
+                                oUserFieldsMD.TableName = tableName;
+                                oUserFieldsMD.Name = name;
+                                oUserFieldsMD.Description = description;
+                                oUserFieldsMD.Type = boFieldTypes;
+                                oUserFieldsMD.SubType = boFldSubTypes;
+                                oUserFieldsMD.Size = size;
+                                break;
+                        }
                         break;
                 }
 

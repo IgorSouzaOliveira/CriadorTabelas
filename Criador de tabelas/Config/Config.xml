@@ -1,10 +1,10 @@
 ﻿<ConnectionData>
-	<SLDServer>DESKTOP-MUO39UR:40000</SLDServer>
-	<Server>DESKTOP-MUO39UR</Server>
+	<SLDServer>DESKTOP-AHO57FM:40000</SLDServer>
+	<Server>DESKTOP-AHO57FM</Server>
 	<CompanyDB>SBOTESTE</CompanyDB>
 	<UserName>manager</UserName>
-	<Password>1234</Password>
-	<ServerDB>DESKTOP-MUO39UR</ServerDB>
+	<Password>manager</Password>
+	<ServerDB>DESKTOP-AHO57FM</ServerDB>
 	<UserDB>sa</UserDB>
 	<PasswordDB>1234</PasswordDB>
 </ConnectionData>

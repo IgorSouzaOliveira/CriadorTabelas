@@ -21,59 +21,7 @@ namespace TesteCriadorTabelas
         public formCriadorTabelas()
         {
             InitializeComponent();
-        }
-
-
-        //private void DbServerType(string cbxversiondb)
-        //{
-        //    switch (cbxVersionDB.Text)
-        //    {
-        //        case "dts_DB_2":
-        //            dbservertype = BoDataServerTypes.dst_DB_2;
-        //            break;
-
-        //        case "dst_HANADB":
-        //            dbservertype = BoDataServerTypes.dst_HANADB;
-        //            break;
-        //        case "dst_MAXDB":
-        //            dbservertype = BoDataServerTypes.dst_MAXDB;
-        //            break;
-        //        case "dst_MSSQL":
-        //            dbservertype = BoDataServerTypes.dst_MSSQL;
-        //            break;
-        //        case "dst_MSSQL2005":
-        //            dbservertype = BoDataServerTypes.dst_MSSQL2005;
-        //            break;
-        //        case "dst_MSSQL2008":
-        //            dbservertype = BoDataServerTypes.dst_MSSQL2008;
-        //            break;
-        //        case "dst_MSSQL2012":
-        //            dbservertype = BoDataServerTypes.dst_MSSQL2012;
-        //            break;
-        //        case "dst_MSSQL2014":
-        //            dbservertype = BoDataServerTypes.dst_MSSQL2014;
-        //            break;
-        //        case "dst_MSSQL2016":
-        //            dbservertype = BoDataServerTypes.dst_MSSQL2016;
-        //            break;
-        //        case "dst_MSSQL2017":
-        //            dbservertype = BoDataServerTypes.dst_MSSQL2017;
-        //            break;
-        //        case "dst_MSSQL2019":
-        //            dbservertype = BoDataServerTypes.dst_MSSQL2019;
-        //            break;
-
-        //        case "dst_SYBASE":
-        //            dbservertype = BoDataServerTypes.dst_SYBASE;
-        //            break;
-
-        //    }
-        //}
-
-        private void StripMenuSair_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        }     
 
         private void cbxTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -263,8 +211,6 @@ namespace TesteCriadorTabelas
             System.Diagnostics.Process.Start(@"C:\LogDeCriação.txt");
         }
 
-
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -281,10 +227,11 @@ namespace TesteCriadorTabelas
             lblReturn.Refresh();
 
             progressBar.Minimum = 0;
-            progressBar.Maximum = 87; // Número total de métodos
+            progressBar.Maximum = 90; // Número total de métodos
             progressBar.Value = 0;
 
             /* Criar Tabelas de Usuário */
+
             await ExecuteMethodWithProgress(() => UserTableManager.AddUserTable("BONECONFMAIN", "BOne: Configuração Add-on", BoUTBTableType.bott_NoObject));
             await ExecuteMethodWithProgress(() => UserTableManager.AddUserTable("BONMODAPROV", "BOne: Modelos de aprovação", BoUTBTableType.bott_NoObject));
             await ExecuteMethodWithProgress(() => UserTableManager.AddUserTable("BONEAPROV", "BOne: Tabela de aprovação", BoUTBTableType.bott_NoObjectAutoIncrement));
@@ -295,6 +242,8 @@ namespace TesteCriadorTabelas
             await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONECONFMAIN", "UrlSL", "Url SL", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0));
             await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONECONFMAIN", "PortaSL", "Porta SL", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0));
             await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONECONFMAIN", "ServidorSL", "Servidor SL", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 100, 0));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONECONFMAIN", "UsuarioSL", "Usuário SL", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 100, 0));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONECONFMAIN", "SenhaSL", "Senha SL", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 100, 0));
 
             /* Tabela: BONMODAPROV */
             await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONMODAPROV", "BOne_ObjectType", "ObjectType", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0));
@@ -406,6 +355,9 @@ namespace TesteCriadorTabelas
 
             /*COFINS*/
             await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "CofinsNtCST", "CofinsNtCST", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 10));
+
+            /*OUSG*/
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("OUSG", "UtilImpXml", "Utilizar na importação de XML?", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 1, 0));
 
 
 
