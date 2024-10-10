@@ -217,8 +217,7 @@ namespace TesteCriadorTabelas
         }
 
         private async void btnExec_Click(object sender, EventArgs e)
-        {
-            CommonBase.OpenConnection();
+        {           
 
             const string path = @"C:\LogDeCriação.txt";
             File.Delete(path);
@@ -227,7 +226,7 @@ namespace TesteCriadorTabelas
             lblReturn.Refresh();
 
             progressBar.Minimum = 0;
-            progressBar.Maximum = 90; // Número total de métodos
+            progressBar.Maximum = 91; // Número total de métodos
             progressBar.Value = 0;
 
             /* Criar Tabelas de Usuário */
@@ -239,6 +238,7 @@ namespace TesteCriadorTabelas
 
             /* Tabela: BONECONFMAIN */
             await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONECONFMAIN", "BOne_AtivoAprov", "Utilizar Aprovação", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 1, 0));
+            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONECONFMAIN", "FechaDocRecusa", "Fecha Documento Rec", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 1, 0));
             await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONECONFMAIN", "UrlSL", "Url SL", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0));
             await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONECONFMAIN", "PortaSL", "Porta SL", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0));
             await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONECONFMAIN", "ServidorSL", "Servidor SL", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 100, 0));
@@ -372,7 +372,7 @@ namespace TesteCriadorTabelas
         {
             method();
             progressBar.Value += 1;
-            await Task.Delay(1000);
+            await Task.Delay(1);
         }
     }
 

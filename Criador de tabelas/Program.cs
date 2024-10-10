@@ -16,6 +16,7 @@ namespace CriadorTabelas
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            CommonBase.OpenConnection();
             Application.Run(new UserLogin());
                        
         }

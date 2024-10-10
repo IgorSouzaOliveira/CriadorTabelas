@@ -16,9 +16,6 @@ namespace CriadorTabelas.Classes
         private object Type { get; set; }
         private object Subtype { get; set; }
         private int Size { get; set; }
-
-        
-
         public CreateFieldsHand(string tablename, string name, string description, BoFieldTypes type, BoFldSubTypes subtype, int size)
         {
             Tablename = tablename;
@@ -29,10 +26,9 @@ namespace CriadorTabelas.Classes
             Subtype = subtype;
             CreateFields();
         }
-
         private void CreateFields()
         {
-            OpenConnection();
+        
             oUserFieldsMD = (UserFieldsMD)oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
 
             try
