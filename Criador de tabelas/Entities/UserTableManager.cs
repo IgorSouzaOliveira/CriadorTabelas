@@ -1,19 +1,31 @@
 ﻿using SAPbobsCOM;
 using System;
 using System.Windows.Forms;
+using TesteCriadorTabelas;
 
 namespace CriadorTabelas.Entities
 {
-    public class UserTableManager
+    public class UserTableManager : CommonBase
     {
-        public static void AddUserTable(string tableName, string tableDescription, BoUTBTableType tableType)
+        private UserTablesMD oUserTablesMD { get; set; } = null;
+        private UserFieldsMD oUserFieldsMD { get; set; } = null;
+        private UserObjectsMD oUserObjectsMD { get; set; } = null;
+
+        private static formCriadorTabelas _form;
+        private String Mensagem { get; set; }
+
+        public UserTableManager(formCriadorTabelas criadorTabelas)
         {
-            UserTablesMD oUserTablesMD = null;
-            oUserTablesMD = CommonBase.oCompany.GetBusinessObject(BoObjectTypes.oUserTables);
+            _form = criadorTabelas;
+        }
+
+        public void AddUserTable(string tableName, string tableDescription, BoUTBTableType tableType)
+        {
+            oUserTablesMD = oCompany.GetBusinessObject(BoObjectTypes.oUserTables);
 
             try
             {
-                if (!oUserTablesMD.GetByKey(tableName))
+                if (oUserTablesMD.GetByKey(tableName))
                 {
                     oUserTablesMD.TableName = tableName;
                     oUserTablesMD.TableDescription = tableDescription;
@@ -23,15 +35,18 @@ namespace CriadorTabelas.Entities
 
                     if (lRet != 0)
                     {
-                        throw new Exception(CommonBase.oCompany.GetLastErrorDescription());
+                        throw new Exception(oCompany.GetLastErrorDescription());
                     }
 
                     LogCreate.Log($"Tabela: @{oUserTablesMD.TableName}, criado com sucesso.");
+                    Mensagem = $"Tabela: @{oUserTablesMD.TableName}, criado com sucesso.";
+
                 }
             }
             catch (Exception ex)
             {
                 LogCreate.Log($"Tabela: @{oUserTablesMD.TableName} - {ex.Message}");
+                Mensagem = $"Tabela: @{oUserTablesMD.TableName} - {ex.Message}";
             }
             finally
             {
@@ -41,12 +56,12 @@ namespace CriadorTabelas.Entities
                 }
             }
 
-        }
-        public static void AddUserFields(string tableName, string name, string description, BoFieldTypes boFieldTypes, BoFldSubTypes boFldSubTypes, int size, int editSize)
-        {
-            UserFieldsMD oUserFieldsMD = null;
+            _form.UpdateProgressWithText(Mensagem);
 
-            oUserFieldsMD = CommonBase.oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
+        }
+        public void AddUserFields(string tableName, string name, string description, BoFieldTypes boFieldTypes, BoFldSubTypes boFldSubTypes, int size, int editSize)
+        {
+            oUserFieldsMD = oCompany.GetBusinessObject(BoObjectTypes.oUserFields);
 
             try
             {
@@ -103,12 +118,14 @@ namespace CriadorTabelas.Entities
                     throw new Exception(CommonBase.oCompany.GetLastErrorDescription());
                 }
 
+                Mensagem = $"Campo: {oUserFieldsMD.Name}, criado com sucesso.";
                 LogCreate.Log($"Campo: {oUserFieldsMD.Name}, criado com sucesso.");
 
             }
             catch (Exception ex)
             {
                 LogCreate.Log($"Campo: {oUserFieldsMD.Name} - {ex.Message}");
+                Mensagem = $"Campo: {oUserFieldsMD.Name} - {ex.Message}";
             }
             finally
             {
@@ -117,10 +134,11 @@ namespace CriadorTabelas.Entities
                     System.Runtime.InteropServices.Marshal.ReleaseComObject(oUserFieldsMD);
                 }
             }
+
+            _form.UpdateProgressWithText(Mensagem);
         }
-        public static void AddUDO(string code, string name, BoUDOObjType boUDOObjType, string tableName, BoYesNoEnum boYesNoEnum, BoYesNoEnum boYesNoEnum1)
+        public void AddUDO(string code, string name, BoUDOObjType boUDOObjType, string tableName, BoYesNoEnum boYesNoEnum, BoYesNoEnum boYesNoEnum1)
         {
-            UserObjectsMD oUserObjectsMD = null;
 
             oUserObjectsMD = CommonBase.oCompany.GetBusinessObject(BoObjectTypes.oUserObjectsMD);
 
@@ -140,11 +158,13 @@ namespace CriadorTabelas.Entities
                     throw new Exception(CommonBase.oCompany.GetLastErrorDescription());
                 }
 
+                Mensagem = $"Objeto: {oUserObjectsMD.Name}, criado com sucesso.";
                 LogCreate.Log($"Objeto: {oUserObjectsMD.Name}, criado com sucesso.");
 
             }
             catch (Exception ex)
             {
+                Mensagem = $"Objeto: @{oUserObjectsMD.Name} - {ex.Message}";
                 LogCreate.Log($"Objeto: @{oUserObjectsMD.Name} - {ex.Message}");
             }
             finally
@@ -154,6 +174,8 @@ namespace CriadorTabelas.Entities
                     System.Runtime.InteropServices.Marshal.ReleaseComObject(oUserObjectsMD);
                 }
             }
+
+            _form.UpdateProgressWithText(Mensagem);
         }
     }
 }

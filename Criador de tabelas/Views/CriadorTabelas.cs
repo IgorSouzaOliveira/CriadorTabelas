@@ -10,18 +10,11 @@ using System.Threading.Tasks;
 namespace TesteCriadorTabelas
 {
     public partial class formCriadorTabelas : Form
-    {
-
-        public Company oCompany = new Company();
-        public string sErrMsg;
-        public long lErrCode;
-        public long lRetCode;
-        public ExecuteQuerySQL oExecuteQuerySQL { get; private set; } = new ExecuteQuerySQL();
-
+    {        
         public formCriadorTabelas()
         {
             InitializeComponent();
-        }     
+        }
 
         private void cbxTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -71,7 +64,6 @@ namespace TesteCriadorTabelas
             }
 
         }
-
         private void checkDefault_CheckedChanged(object sender, EventArgs e)
         {
             if (checkDefault.Checked)
@@ -84,7 +76,6 @@ namespace TesteCriadorTabelas
             }
 
         }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
@@ -175,7 +166,6 @@ namespace TesteCriadorTabelas
 
 
         }
-
         private void cbxEstru_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (cbxEstru.SelectedItem.ToString())
@@ -189,7 +179,6 @@ namespace TesteCriadorTabelas
                     break;
             }
         }
-
         private void cbxValid_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (cbxValid.SelectedItem.ToString())
@@ -204,20 +193,20 @@ namespace TesteCriadorTabelas
 
             }
         }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             linkLog.LinkVisited = true;
             System.Diagnostics.Process.Start(@"C:\LogDeCriação.txt");
         }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+        private void btnExec_Click(object sender, EventArgs e)
+        {
 
-        private async void btnExec_Click(object sender, EventArgs e)
-        {           
+            UserTableManager tableManager = new UserTableManager(this);
+            ExecuteQuerySQL oExecuteQuerySQL = new ExecuteQuerySQL();
 
             const string path = @"C:\LogDeCriação.txt";
             File.Delete(path);
@@ -231,148 +220,145 @@ namespace TesteCriadorTabelas
 
             /* Criar Tabelas de Usuário */
 
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserTable("BONECONFMAIN", "BOne: Configuração Add-on", BoUTBTableType.bott_NoObject));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserTable("BONMODAPROV", "BOne: Modelos de aprovação", BoUTBTableType.bott_NoObject));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserTable("BONEAPROV", "BOne: Tabela de aprovação", BoUTBTableType.bott_NoObjectAutoIncrement));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserTable("BONEXMLDATA", "BOne: Tabela de xml", BoUTBTableType.bott_NoObjectAutoIncrement));
+            tableManager.AddUserTable("BONECONFMAIN", "BOne: Configuração Add-on", BoUTBTableType.bott_NoObject);
+            tableManager.AddUserTable("BONMODAPROV", "BOne: Modelos de aprovação", BoUTBTableType.bott_NoObject);
+            tableManager.AddUserTable("BONEAPROV", "BOne: Tabela de aprovação", BoUTBTableType.bott_NoObjectAutoIncrement);
+            tableManager.AddUserTable("BONEXMLDATA", "BOne: Tabela de xml", BoUTBTableType.bott_NoObjectAutoIncrement);
 
             /* Tabela: BONECONFMAIN */
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONECONFMAIN", "BOne_AtivoAprov", "Utilizar Aprovação", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 1, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONECONFMAIN", "FechaDocRecusa", "Fecha Documento Rec", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 1, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONECONFMAIN", "UrlSL", "Url SL", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONECONFMAIN", "PortaSL", "Porta SL", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONECONFMAIN", "ServidorSL", "Servidor SL", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 100, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONECONFMAIN", "UsuarioSL", "Usuário SL", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 100, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONECONFMAIN", "SenhaSL", "Senha SL", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 100, 0));
+            tableManager.AddUserFields("BONECONFMAIN", "BOne_AtivoAprov", "Utilizar Aprovação", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 1, 0);
+            tableManager.AddUserFields("BONECONFMAIN", "FechaDocRecusa", "Fecha Documento Rec", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 1, 0);
+            tableManager.AddUserFields("BONECONFMAIN", "UrlSL", "Url SL", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0);
+            tableManager.AddUserFields("BONECONFMAIN", "PortaSL", "Porta SL", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0);
+            tableManager.AddUserFields("BONECONFMAIN", "ServidorSL", "Servidor SL", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 100, 0);
+            tableManager.AddUserFields("BONECONFMAIN", "UsuarioSL", "Usuário SL", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 100, 0);
+            tableManager.AddUserFields("BONECONFMAIN", "SenhaSL", "Senha SL", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 100, 0);
 
             /* Tabela: BONMODAPROV */
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONMODAPROV", "BOne_ObjectType", "ObjectType", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONMODAPROV", "BOne_NomeConsulta", "Nome Consulta", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 100, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONMODAPROV", "BOne_Query", "Query", BoFieldTypes.db_Memo, BoFldSubTypes.st_None, 0, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONMODAPROV", "BOne_CodeEtapa", "Codigo Etapa", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONMODAPROV", "BOne_EtapaAut", "Etapa de autorização", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONMODAPROV", "BOne_Ativo", "Ativo", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 1, 0));
+            tableManager.AddUserFields("BONMODAPROV", "BOne_ObjectType", "ObjectType", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0);
+            tableManager.AddUserFields("BONMODAPROV", "BOne_NomeConsulta", "Nome Consulta", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 100, 0);
+            tableManager.AddUserFields("BONMODAPROV", "BOne_Query", "Query", BoFieldTypes.db_Memo, BoFldSubTypes.st_None, 0, 0);
+            tableManager.AddUserFields("BONMODAPROV", "BOne_CodeEtapa", "Codigo Etapa", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
+            tableManager.AddUserFields("BONMODAPROV", "BOne_EtapaAut", "Etapa de autorização", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
+            tableManager.AddUserFields("BONMODAPROV", "BOne_Ativo", "Ativo", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 1, 0);
 
             /* Tabela: BONEAPROV */
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneDocDate", "DocDate", BoFieldTypes.db_Date, BoFldSubTypes.st_None, 0, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneTipoDoc", "TipoDoc", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneNumDoc", "NumDoc", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneCardCode", "CardCode", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneCardName", "CardName", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 150, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneBplID", "BplID", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneBplName", "BplName", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 150, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneSlpCode", "SlpCode", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneUserSign", "UserSign", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOnePaymentCode", "PaymentCode", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOnePaymentMethod", "PaymentMethod", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneDocTotal", "DocTotal", BoFieldTypes.db_Float, BoFldSubTypes.st_Price, 0, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneCodEtapa", "CodigoEtapa", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneNameEtapa", "EtapaNome", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneModeloAut", "NomeModelo", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneQueryAut", "QueryAut", BoFieldTypes.db_Memo, BoFldSubTypes.st_None, 0, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneAutorizado", "Autorizado", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 10, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEAPROV", "BOneProcessado", "Processado", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 1));
+            tableManager.AddUserFields("BONEAPROV", "BOneDocDate", "DocDate", BoFieldTypes.db_Date, BoFldSubTypes.st_None, 0, 0);
+            tableManager.AddUserFields("BONEAPROV", "BOneTipoDoc", "TipoDoc", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
+            tableManager.AddUserFields("BONEAPROV", "BOneNumDoc", "NumDoc", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
+            tableManager.AddUserFields("BONEAPROV", "BOneCardCode", "CardCode", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
+            tableManager.AddUserFields("BONEAPROV", "BOneCardName", "CardName", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 150, 0);
+            tableManager.AddUserFields("BONEAPROV", "BOneBplID", "BplID", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
+            tableManager.AddUserFields("BONEAPROV", "BOneBplName", "BplName", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 150, 0);
+            tableManager.AddUserFields("BONEAPROV", "BOneSlpCode", "SlpCode", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
+            tableManager.AddUserFields("BONEAPROV", "BOneUserSign", "UserSign", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
+            tableManager.AddUserFields("BONEAPROV", "BOnePaymentCode", "PaymentCode", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
+            tableManager.AddUserFields("BONEAPROV", "BOnePaymentMethod", "PaymentMethod", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
+            tableManager.AddUserFields("BONEAPROV", "BOneDocTotal", "DocTotal", BoFieldTypes.db_Float, BoFldSubTypes.st_Price, 0, 0);
+            tableManager.AddUserFields("BONEAPROV", "BOneCodEtapa", "CodigoEtapa", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
+            tableManager.AddUserFields("BONEAPROV", "BOneNameEtapa", "EtapaNome", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0);
+            tableManager.AddUserFields("BONEAPROV", "BOneModeloAut", "NomeModelo", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0);
+            tableManager.AddUserFields("BONEAPROV", "BOneQueryAut", "QueryAut", BoFieldTypes.db_Memo, BoFldSubTypes.st_None, 0, 0);
+            tableManager.AddUserFields("BONEAPROV", "BOneAutorizado", "Autorizado", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 10, 0);
+            tableManager.AddUserFields("BONEAPROV", "BOneProcessado", "Processado", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 1);
 
             /* Tabela: BONEXMLDATA */
 
             /* Campos da Tag: <ide> */
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "ChaveAcesso", "ChaveAcesso", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 100, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "idecUF", "idecUF", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 10, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "idecNF", "idecNF", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 100, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "ideMod", "ideMod", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "ideSerie", "ideSerie", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 10, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "idenNF", "idenNF", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "idedhEmi", "idedhEmi", BoFieldTypes.db_Date, BoFldSubTypes.st_None, 0, 0));
+            tableManager.AddUserFields("BONEXMLDATA", "ChaveAcesso", "ChaveAcesso", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 100, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "idecUF", "idecUF", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 10, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "idecNF", "idecNF", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 100, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "ideMod", "ideMod", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "ideSerie", "ideSerie", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 10, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "idenNF", "idenNF", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "idedhEmi", "idedhEmi", BoFieldTypes.db_Date, BoFldSubTypes.st_None, 0, 0);
 
             /* Campos da Tag: <emit> */
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "emitCNPJ", "emitCNPJ", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "emitxNome", "emitxNome", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "emitxFant", "emitxFant", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderEmitxLgr", "enderEmitxLgr", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderEmitNro", "enderEmitNro", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderEmitxBairro", "enderEmitxBairro", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderEmitcMun", "enderEmitcMun", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderEmitxMun", "enderEmitxMun", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderEmitUF", "enderEmitUF", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 5, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderEmitCEP", "enderEmitCEP", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 10, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderEmitcPais", "enderEmitcPais", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderEmitxPais", "enderEmitxPais", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
-            //await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderEmitfone", "enderEmitfone", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0));
-            //await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderEmitIE", "enderEmitIE", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
-            //await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderEmitIM", "enderEmitIM", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 30, 0));
-            //await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderEmitCNAE", "enderEmitCNAE", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 30, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderEmitCRT", "enderEmitCRT", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 10, 0));
+            tableManager.AddUserFields("BONEXMLDATA", "emitCNPJ", "emitCNPJ", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "emitxNome", "emitxNome", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "emitxFant", "emitxFant", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "enderEmitxLgr", "enderEmitxLgr", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "enderEmitNro", "enderEmitNro", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "enderEmitxBairro", "enderEmitxBairro", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "enderEmitcMun", "enderEmitcMun", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
+            tableManager.AddUserFields("BONEXMLDATA", "enderEmitxMun", "enderEmitxMun", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "enderEmitUF", "enderEmitUF", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 5, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "enderEmitCEP", "enderEmitCEP", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 10, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "enderEmitcPais", "enderEmitcPais", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
+            tableManager.AddUserFields("BONEXMLDATA", "enderEmitxPais", "enderEmitxPais", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
+            //tableManager.AddUserFields("BONEXMLDATA", "enderEmitfone", "enderEmitfone", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0));
+            //tableManager.AddUserFields("BONEXMLDATA", "enderEmitIE", "enderEmitIE", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
+            //tableManager.AddUserFields("BONEXMLDATA", "enderEmitIM", "enderEmitIM", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 30, 0));
+            //tableManager.AddUserFields("BONEXMLDATA", "enderEmitCNAE", "enderEmitCNAE", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 30, 0));
+            tableManager.AddUserFields("BONEXMLDATA", "enderEmitCRT", "enderEmitCRT", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 10, 0);
 
             /* Campos da Tag: <dest> */
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "destCNPJ", "destCNPJ", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "destxNome", "destxNome", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderDestxLgr", "enderDestxLgr", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderDestNro", "enderDestNro", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderDestxCpl", "enderDestxCpl", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 30, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderDestxBairro", "enderDestxBairro", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderDestcMun", "enderDestcMun", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderDestxMun", "enderDestxMun", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderDestUF", "enderDestUF", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 5, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderDestCEP", "enderDestCEP", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 10, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderDestcPais", "enderDestcPais", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderDestxPais", "enderDestxPais", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderDestfone", "enderDestfone", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "indIEDest", "indIEDest", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 10, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderDestIE", "enderDestIE", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "enderDestEmail", "enderDestEmail", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 100, 0));
+            tableManager.AddUserFields("BONEXMLDATA", "destCNPJ", "destCNPJ", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "destxNome", "destxNome", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "enderDestxLgr", "enderDestxLgr", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "enderDestNro", "enderDestNro", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "enderDestxCpl", "enderDestxCpl", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 30, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "enderDestxBairro", "enderDestxBairro", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "enderDestcMun", "enderDestcMun", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
+            tableManager.AddUserFields("BONEXMLDATA", "enderDestxMun", "enderDestxMun", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "enderDestUF", "enderDestUF", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 5, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "enderDestCEP", "enderDestCEP", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 10, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "enderDestcPais", "enderDestcPais", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
+            tableManager.AddUserFields("BONEXMLDATA", "enderDestxPais", "enderDestxPais", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "enderDestfone", "enderDestfone", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "indIEDest", "indIEDest", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 10, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "enderDestIE", "enderDestIE", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "enderDestEmail", "enderDestEmail", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 100, 0);
 
             /* Campos da Tag: <det nItem> */
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "prodcProd", "prodcProd", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "prodcEAN", "prodcEAN", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "prodxProd", "prodxProd", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "prodNCM", "prodNCM", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "prodCFOP", "prodCFOP", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 10));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "produCom", "produCom", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "prodqCom", "prodqCom", BoFieldTypes.db_Float, BoFldSubTypes.st_Quantity, 0, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "prodvUnCom", "prodvUnCom", BoFieldTypes.db_Float, BoFldSubTypes.st_Price, 0, 0));
-            //await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "prodvProd", "prodvProd", BoFieldTypes.db_Float, BoFldSubTypes.st_Quantity, 0, 0));
-            //await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "prodcEANTrib", "prodcEANTrib", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0));
-            //await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "produTrib", "produTrib", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0));
-            //await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "prodvUnTrib", "prodvUnTrib", BoFieldTypes.db_Float, BoFldSubTypes.st_Quantity, 0, 0));
-            //await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "prodindTot", "prodindTot", BoFieldTypes.db_Numeric, BoFldSubTypes.st_Quantity, 0, 10));
+            tableManager.AddUserFields("BONEXMLDATA", "prodcProd", "prodcProd", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "prodcEAN", "prodcEAN", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "prodxProd", "prodxProd", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 254, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "prodNCM", "prodNCM", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "prodCFOP", "prodCFOP", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 10);
+            tableManager.AddUserFields("BONEXMLDATA", "produCom", "produCom", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 50, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "prodqCom", "prodqCom", BoFieldTypes.db_Float, BoFldSubTypes.st_Quantity, 0, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "prodvUnCom", "prodvUnCom", BoFieldTypes.db_Float, BoFldSubTypes.st_Price, 0, 0);
+            //tableManager.AddUserFields("BONEXMLDATA", "prodvProd", "prodvProd", BoFieldTypes.db_Float, BoFldSubTypes.st_Quantity, 0, 0));
+            //tableManager.AddUserFields("BONEXMLDATA", "prodcEANTrib", "prodcEANTrib", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0));
+            //tableManager.AddUserFields("BONEXMLDATA", "produTrib", "produTrib", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 20, 0));
+            //tableManager.AddUserFields("BONEXMLDATA", "prodvUnTrib", "prodvUnTrib", BoFieldTypes.db_Float, BoFldSubTypes.st_Quantity, 0, 0));
+            //tableManager.AddUserFields("BONEXMLDATA", "prodindTot", "prodindTot", BoFieldTypes.db_Numeric, BoFldSubTypes.st_Quantity, 0, 10));
 
             /* Campos da Tag: <imposto> */
             /*ICMS*/
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "ICMSorig", "ICMSorig", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "ICMSCST", "ICMSCST", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "ICMSmodBC", "ICMSmodBC", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "ICMSpRedBC", "ICMSpRedBC", BoFieldTypes.db_Float, BoFldSubTypes.st_Quantity, 0, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "ICMSvBC", "ICMSvBC", BoFieldTypes.db_Float, BoFldSubTypes.st_Quantity, 0, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "ICMSpICMS", "ICMSpICMS", BoFieldTypes.db_Float, BoFldSubTypes.st_Quantity, 0, 0));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "ICMSvICMS", "ICMSvICMS", BoFieldTypes.db_Float, BoFldSubTypes.st_Quantity, 0, 0));
+            tableManager.AddUserFields("BONEXMLDATA", "ICMSorig", "ICMSorig", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
+            tableManager.AddUserFields("BONEXMLDATA", "ICMSCST", "ICMSCST", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
+            tableManager.AddUserFields("BONEXMLDATA", "ICMSmodBC", "ICMSmodBC", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
+            tableManager.AddUserFields("BONEXMLDATA", "ICMSpRedBC", "ICMSpRedBC", BoFieldTypes.db_Float, BoFldSubTypes.st_Quantity, 0, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "ICMSvBC", "ICMSvBC", BoFieldTypes.db_Float, BoFldSubTypes.st_Quantity, 0, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "ICMSpICMS", "ICMSpICMS", BoFieldTypes.db_Float, BoFldSubTypes.st_Quantity, 0, 0);
+            tableManager.AddUserFields("BONEXMLDATA", "ICMSvICMS", "ICMSvICMS", BoFieldTypes.db_Float, BoFldSubTypes.st_Quantity, 0, 0);
 
             /*IPI*/
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "IPIcEnq", "IPIcEnq", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "IPINtCST", "IPINtCST", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
+            tableManager.AddUserFields("BONEXMLDATA", "IPIcEnq", "IPIcEnq", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
+            tableManager.AddUserFields("BONEXMLDATA", "IPINtCST", "IPINtCST", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
 
             /*PIS*/
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "PisNtCST", "PisNtCST", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11));
+            tableManager.AddUserFields("BONEXMLDATA", "PisNtCST", "PisNtCST", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 11);
 
             /*COFINS*/
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("BONEXMLDATA", "CofinsNtCST", "CofinsNtCST", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 10));
+            tableManager.AddUserFields("BONEXMLDATA", "CofinsNtCST", "CofinsNtCST", BoFieldTypes.db_Numeric, BoFldSubTypes.st_None, 0, 10);
 
             /*OUSG*/
-            await ExecuteMethodWithProgress(() => UserTableManager.AddUserFields("OUSG", "UtilImpXml", "Utilizar na importação de XML?", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 1, 0));
-
-
+            tableManager.AddUserFields("OUSG", "UtilImpXml", "Utilizar na importação de XML?", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 1, 0);
 
             /* Registrar Objeto */
-            //UserTableManager.AddUDO("SOCONF", "SO: Configuração SO Solutions",BoUDOObjType.boud_MasterData, "SOCONF",BoYesNoEnum.tNO, BoYesNoEnum.tYES);
+            //tableManager.AddUDO("SOCONF", "SO: Configuração SO Solutions", BoUDOObjType.boud_MasterData, "SOCONF", BoYesNoEnum.tNO, BoYesNoEnum.tYES, 0);
 
             oExecuteQuerySQL.CreateProc();
             lblReturn.Text = "Processo Finalizado.";
         }
-
-        private async Task ExecuteMethodWithProgress(Action method)
+        public void UpdateProgressWithText(string msg)
         {
-            method();
+            lblReturn.Text = msg;
+            lblReturn.Refresh();
             progressBar.Value += 1;
-            await Task.Delay(1);
         }
     }
 

@@ -123,15 +123,16 @@ namespace TesteCriadorTabelas
             this.lblReturn.ForeColor = System.Drawing.Color.Blue;
             this.lblReturn.Location = new System.Drawing.Point(45, 226);
             this.lblReturn.Name = "lblReturn";
-            this.lblReturn.Size = new System.Drawing.Size(0, 15);
+            this.lblReturn.Size = new System.Drawing.Size(16, 15);
             this.lblReturn.TabIndex = 66;
+            this.lblReturn.Text = "...";
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.Color.Blue;
-            this.lblStatus.Location = new System.Drawing.Point(6, 226);
+            this.lblStatus.Location = new System.Drawing.Point(3, 226);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(44, 15);
             this.lblStatus.TabIndex = 65;

@@ -43,7 +43,7 @@ namespace CriadorTabelas.Classes
                         oUserFieldsMD.Type = (BoFieldTypes)Type;
                         oUserFieldsMD.Size = Size;
                         lRetCode = oUserFieldsMD.Add();
-                        ExceptionError(lRetCode, oUserFieldsMD);
+                        ValidaErro(lRetCode, oUserFieldsMD);
                         break;
 
                     case BoFieldTypes.db_Numeric:
@@ -54,7 +54,7 @@ namespace CriadorTabelas.Classes
                         oUserFieldsMD.Type = (BoFieldTypes)Type;
                         oUserFieldsMD.EditSize = Size;
                         lRetCode = oUserFieldsMD.Add();
-                        ExceptionError(lRetCode, oUserFieldsMD);
+                        ValidaErro(lRetCode, oUserFieldsMD);
                         break;
 
                     case BoFieldTypes.db_Date:
@@ -64,7 +64,7 @@ namespace CriadorTabelas.Classes
                         oUserFieldsMD.Type = (BoFieldTypes)Type;
                         oUserFieldsMD.SubType = (BoFldSubTypes)Subtype;
                         lRetCode = oUserFieldsMD.Add();
-                        ExceptionError(lRetCode, oUserFieldsMD);
+                        ValidaErro(lRetCode, oUserFieldsMD);
                         break;
 
                     case BoFieldTypes.db_Float:
@@ -75,7 +75,7 @@ namespace CriadorTabelas.Classes
                         oUserFieldsMD.Type = (BoFieldTypes)Type;
                         oUserFieldsMD.SubType = (BoFldSubTypes)Subtype;
                         lRetCode = oUserFieldsMD.Add();
-                        ExceptionError(lRetCode, oUserFieldsMD);
+                        ValidaErro(lRetCode, oUserFieldsMD);
                         break;
 
                 }
@@ -91,7 +91,7 @@ namespace CriadorTabelas.Classes
                 ex.GetHashCode();
             }
         }
-        private void ExceptionError(int lretcode, UserFieldsMD oUserFieldsMD)
+        private void ValidaErro(int lretcode, UserFieldsMD oUserFieldsMD)
         {            
             int errorCode = lretcode;
             string errorMsg;
