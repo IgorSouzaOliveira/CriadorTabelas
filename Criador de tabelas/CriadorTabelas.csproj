@@ -186,11 +186,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\CommonBase.cs" />
-    <Compile Include="Entities\CreateFieldsHand.cs" />
-    <Compile Include="Entities\ExecuteQuerySQL.cs" />
-    <Compile Include="Entities\LogCreate.cs" />
-    <Compile Include="Entities\UserTableManager.cs" />
+    <Compile Include="Business\SAPService.cs" />
+    <Compile Include="Business\CreateFieldsHand.cs" />
+    <Compile Include="Business\ExecuteQuerySQL.cs" />
+    <Compile Include="Business\LogCreate.cs" />
+    <Compile Include="Business\UserTableManager.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -15,8 +15,6 @@ namespace CriadorTabelas.Entities
         }
 
         private string connectionString;
-        LogCreate oLogCreate = new LogCreate();
-
         public void Connection()
         {
             SqlConnection cnn;
@@ -29,22 +27,13 @@ namespace CriadorTabelas.Entities
                 XmlDocument xmlDoc = new XmlDocument();
                 xmlDoc.Load(path);
 
-                XmlNodeList xnList = xmlDoc.GetElementsByTagName("ConnectionData");
+                var dataSource = xmlDoc.GetElementsByTagName("ServerDB")[0].InnerText;
+                var dataBase = xmlDoc.GetElementsByTagName("CompanyDB")[0].InnerText;
+                var userDB = xmlDoc.GetElementsByTagName("UserDB")[0].InnerText;
+                var passwordDB = xmlDoc.GetElementsByTagName("PasswordDB")[0].InnerText;
 
-                foreach (XmlNode xn in xnList)
-                {
-                    var dataSource = xn["ServerDB"].InnerText;
-                    var dataBase = xn["CompanyDB"].InnerText;
-                    var userDB = xn["UserDB"].InnerText;
-                    var passwordDB = xn["PasswordDB"].InnerText;
+                connectionString = $@"Data Source={dataSource};Initial Catalog={dataBase};User ID={userDB};Password={passwordDB}";
 
-                    connectionString = $@"Data Source={dataSource};Initial Catalog={dataBase};User ID={userDB};Password={passwordDB}";
-
-                }
-
-
-                
-                
                 cnn = new SqlConnection(connectionString);
 
             }
@@ -59,7 +48,6 @@ namespace CriadorTabelas.Entities
             Connection();
 
             string[] procedure = { Resources.Resource.BONE_ExecAprov };
-            List<string> createdProcedures = new List<string>();
 
             foreach (string procedures in procedure)
             {
@@ -71,12 +59,11 @@ namespace CriadorTabelas.Entities
                         SqlCommand Query = new SqlCommand(procedures, connection);
                         Query.ExecuteNonQuery();
 
-                        // Consulta para recuperar o nome da última procedure criada
                         string queryLastCreatedProcedure = "SELECT TOP 1 ROUTINE_NAME FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_TYPE = 'PROCEDURE' ORDER BY CREATED DESC";
                         using (SqlCommand command = new SqlCommand(queryLastCreatedProcedure, connection))
                         {
                             string lastCreatedProcedure = (string)command.ExecuteScalar();
-                            createdProcedures.Add(lastCreatedProcedure); // Adiciona o nome da procedure criada à lista                           
+                            LogCreate.Log($"[Sucesso] - Procedure: {lastCreatedProcedure} criada com sucesso.");
                         }
 
                         connection.Close();
@@ -88,12 +75,6 @@ namespace CriadorTabelas.Entities
                     LogCreate.Log($"[Erro] - {ex.Message}.");
                 }
             }
-
-            foreach (string procedureName in createdProcedures)
-            {
-                LogCreate.Log($"[Sucesso] - Procedure: {procedureName} criada com sucesso.");
-            }
-
         }
 
     }

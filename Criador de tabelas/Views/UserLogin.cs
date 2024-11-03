@@ -22,7 +22,7 @@ namespace CriadorTabelas
         private void button1_Click(object sender, EventArgs e)
         {
 
-            SAPbobsCOM.Recordset oRst = CommonBase.oCompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.BoRecordset);
+            SAPbobsCOM.Recordset oRst = SAPService.oCompany.GetBusinessObject(SAPbobsCOM.BoObjectTypes.BoRecordset);
 
             try
             {

@@ -16,7 +16,7 @@ namespace CriadorTabelas
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            CommonBase.OpenConnection();
+            SAPService.OpenConnection();
             Application.Run(new UserLogin());
                        
         }

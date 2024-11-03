@@ -6,10 +6,9 @@ using System.Xml;
 
 namespace CriadorTabelas.Entities
 {
-    public class CommonBase
+    public class SAPService
     {
-        public static Company oCompany = new Company();    
-
+        public static Company oCompany = new Company();
         public static void OpenConnection()
         {
             try
@@ -17,22 +16,16 @@ namespace CriadorTabelas.Entities
 
                 string directory = AppDomain.CurrentDomain.BaseDirectory;
                 string path = Path.Combine(directory, $"Config\\Config.xml");
-
                 XmlDocument xmlDoc = new XmlDocument();
                 xmlDoc.Load(path);
 
-                XmlNodeList xnList = xmlDoc.GetElementsByTagName("ConnectionData");
-
-                foreach (XmlNode xn in xnList)
-                {
-                    oCompany.SLDServer = xn["SLDServer"].InnerText;
-                    oCompany.Server = xn["Server"].InnerText;
-                    oCompany.CompanyDB = xn["CompanyDB"].InnerText;
-                    oCompany.UserName = xn["UserName"].InnerText;
-                    oCompany.Password = xn["Password"].InnerText;
-                    oCompany.language = BoSuppLangs.ln_Portuguese_Br;
-                    oCompany.DbServerType = BoDataServerTypes.dst_MSSQL2019;
-                }   
+                oCompany.SLDServer = xmlDoc.GetElementsByTagName("SLDServer")[0].InnerText;
+                oCompany.Server = xmlDoc.GetElementsByTagName("Server")[0].InnerText;
+                oCompany.CompanyDB = xmlDoc.GetElementsByTagName("CompanyDB")[0].InnerText;
+                oCompany.UserName = xmlDoc.GetElementsByTagName("UserName")[0].InnerText;
+                oCompany.Password = xmlDoc.GetElementsByTagName("Password")[0].InnerText;
+                oCompany.language = BoSuppLangs.ln_Portuguese_Br;
+                oCompany.DbServerType = BoDataServerTypes.dst_MSSQL2019;
 
                 Int32 lRet = oCompany.Connect();
                 if (lRet != 0)
@@ -44,7 +37,6 @@ namespace CriadorTabelas.Entities
                 MessageBox.Show(ex.Message);
             }
         }
-
         public static void CloseConnection()
         {
             oCompany.Disconnect();

@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace CriadorTabelas.Classes
 {
-    class CreateFieldsHand : CommonBase
+    class CreateFieldsHand : SAPService
     {        
         UserFieldsMD oUserFieldsMD;
 

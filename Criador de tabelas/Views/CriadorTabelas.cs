@@ -204,9 +204,8 @@ namespace TesteCriadorTabelas
         }
         private void btnExec_Click(object sender, EventArgs e)
         {
-
             UserTableManager tableManager = new UserTableManager(this);
-            ExecuteQuerySQL oExecuteQuerySQL = new ExecuteQuerySQL();
+            ExecuteQuerySQL oExecuteQuerySQL = new ExecuteQuerySQL();            
 
             const string path = @"C:\LogDeCriação.txt";
             File.Delete(path);
@@ -347,6 +346,9 @@ namespace TesteCriadorTabelas
 
             /*OUSG*/
             tableManager.AddUserFields("OUSG", "UtilImpXml", "Utilizar na importação de XML?", BoFieldTypes.db_Alpha, BoFldSubTypes.st_None, 1, 0);
+
+            /* Consultas de usuário*/
+            tableManager.CreateQueryCategories("Modelos de Aprovação - SO Soluções", "MOD - Pedido de compra", "SELECT 'TRUE' FROM OPOR T0 WHERE T0.DocEntry = @DocEntry AND T0.DocTotal > 10000");
 
             /* Registrar Objeto */
             //tableManager.AddUDO("SOCONF", "SO: Configuração SO Solutions", BoUDOObjType.boud_MasterData, "SOCONF", BoYesNoEnum.tNO, BoYesNoEnum.tYES, 0);
